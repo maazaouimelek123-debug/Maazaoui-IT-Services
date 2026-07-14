@@ -166,12 +166,35 @@ button { font: inherit; color: inherit; }
 }
 
 .brand {
+  display: inline-block;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.05rem;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 .brand span { color: var(--accent); }
+.brand-cell { color: var(--accent); }
+.brand-expand {
+  display: inline-block;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--text);
+  font-weight: 500;
+  vertical-align: bottom;
+  transition: max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.brand-gap {
+  display: inline-block;
+  width: 0;
+  vertical-align: bottom;
+  transition: width 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.brand:hover .brand-expand,
+.brand:focus-visible .brand-expand { max-width: 8em; }
+.brand:hover .brand-gap,
+.brand:focus-visible .brand-gap { width: 0.32em; }
 
 .nav-links {
   display: flex;
