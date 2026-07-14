@@ -84,7 +84,7 @@
     'sec.method.kicker': 'Process',
     'sec.method.title': 'Simple, clear, <em>no surprises</em>.',
     'm1.title': 'Discovery',
-    'm1.desc': 'We talk about your business, your customers and what the site needs to achieve. Free, no strings attached.',
+    'm1.desc': 'We talk about your business, your customers and what the site needs to achieve.',
     'm2.title': 'Proposal',
     'm2.desc': 'You receive a mockup and a clear quote, with a precise scope and timeline.',
     'm3.title': 'Build',
