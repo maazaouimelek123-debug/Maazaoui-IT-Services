@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melek Maazaoui — Développeur web freelance à Tunis</title>
+  <meta name="description" content="Sites vitrines, menus digitaux QR et outils métier pour cafés, restaurants et commerces. Développeur web freelance basé à Tunis — projets sur-mesure, sans template.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Melek Maazaoui — Développeur web freelance">
+  <meta property="og:description" content="Sites vitrines, menus digitaux QR et outils métier pour cafés, restaurants et commerces.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0D'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23C6F24E' text-anchor='middle'%3EM.%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Melek Maazaoui",
+    "jobTitle": "Développeur web freelance",
+    "email": "mailto:melekmaazaoui41@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tunis", "addressCountry": "TN" },
+    "knowsAbout": ["Sites vitrines", "Menus digitaux", "React", "Node.js", "Applications web"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="#top">melek<span>.</span>maazaoui</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#methode" data-i18n="nav.method">Méthode</a></li>
+        <li><a href="#apropos" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+        <a class="btn btn-accent btn-sm nav-cta" href="#contact" data-i18n="nav.cta">Discutons</a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <ul>
+      <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#methode" data-i18n="nav.method">Méthode</a></li>
+      <li><a href="#apropos" data-i18n="nav.about">À propos</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero container">
+      <p class="badge reveal">
+        <span class="pulse" aria-hidden="true"></span>
+        <span data-i18n="hero.badge">Disponible pour de nouveaux projets</span>
+      </p>
+      <h1 class="hero-title reveal" data-i18n="hero.title">Des sites web qui font <em>entrer les clients</em>.</h1>
+      <p class="hero-lede reveal" data-i18n="hero.lede">Je suis Melek Maazaoui, développeur web freelance à Tunis. Je conçois des sites vitrines, des commandes en ligne et des outils métier qui donnent aux cafés, restaurants et entreprises l'image qu'ils méritent.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn btn-accent" href="#projets">
+          <span data-i18n="hero.cta1">Voir mes projets</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">Me contacter</a>
+      </div>
+      <dl class="hero-stats reveal">
+        <div class="stat">
+          <dt data-i18n="hero.stat1">Projets réalisés</dt>
+          <dd><span data-count="6">0</span>+</dd>
+        </div>
+        <div class="stat">
+          <dt data-i18n="hero.stat2">Sur-mesure, zéro template</dt>
+          <dd><span data-count="100">0</span>%</dd>
+        </div>
+        <div class="stat">
+          <dt data-i18n="hero.stat3">Délai de réponse</dt>
+          <dd>&lt;24h</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <ul class="marquee-list">
+          <li data-i18n="mq.1">Sites vitrines</li>
+          <li data-i18n="mq.2">Menus digitaux QR</li>
+          <li data-i18n="mq.3">Applications web</li>
+          <li data-i18n="mq.4">Design sur-mesure</li>
+          <li>React · Vite · Node.js</li>
+          <li data-i18n="mq.7">Outils IA</li>
+          <li data-i18n="mq.5">Réservation WhatsApp</li>
+          <li data-i18n="mq.6">Déploiement &amp; support</li>
+        </ul>
+        <ul class="marquee-list" aria-hidden="true">
+          <li data-i18n="mq.1">Sites vitrines</li>
+          <li data-i18n="mq.2">Menus digitaux QR</li>
+          <li data-i18n="mq.3">Applications web</li>
+          <li data-i18n="mq.4">Design sur-mesure</li>
+          <li>React · Vite · Node.js</li>
+          <li data-i18n="mq.7">Outils IA</li>
+          <li data-i18n="mq.5">Réservation WhatsApp</li>
+          <li data-i18n="mq.6">Déploiement &amp; support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ============ PROJETS ============ -->
+    <section class="section container" id="projets">
+      <header class="section-head reveal">
+        <p class="kicker"><span>01</span><span data-i18n="sec.projects.kicker">Projets sélectionnés</span></p>
+        <h2 data-i18n="sec.projects.title">Du travail réel, pour des <em>clients réels</em>.</h2>
+        <p class="section-sub" data-i18n="sec.projects.sub">Chaque projet part de l'identité du client — ses couleurs, sa carte, son ambiance — et la traduit en une expérience en ligne.</p>
+      </header>
+
+      <div class="projects-grid">
+
+        <article class="project reveal">
+          <div class="cover cover--bisou" aria-hidden="true">
+            <span class="cover-word">BISOU</span>
+            <span class="bisou-rule"></span>
+            <span class="cover-sub">COFFEE &amp; BAKERY · COMMANDE EN LIGNE</span>
+            <svg class="qr-motif" viewBox="0 0 56 56" fill="#F5EDE0">
+              <rect x="0" y="0" width="16" height="16" fill="none" stroke="#F5EDE0" stroke-width="3"/>
+              <rect x="5" y="5" width="6" height="6"/>
+              <rect x="24" y="0" width="6" height="6"/><rect x="36" y="6" width="6" height="6"/>
+              <rect x="48" y="0" width="6" height="6"/><rect x="24" y="18" width="6" height="6"/>
+              <rect x="42" y="20" width="6" height="6"/><rect x="0" y="24" width="6" height="6"/>
+              <rect x="12" y="30" width="6" height="6"/><rect x="30" y="32" width="6" height="6"/>
+              <rect x="48" y="30" width="6" height="6"/><rect x="6" y="44" width="6" height="6"/>
+              <rect x="22" y="48" width="6" height="6"/><rect x="40" y="44" width="6" height="6"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-meta"><span data-i18n="p.bisou.type">Site + commande en ligne</span> · 2026 · <span class="pulse pulse-sm" aria-hidden="true"></span><span data-i18n="p.bisou.live">En ligne</span></p>
+            <h3>BISOU — Coffee &amp; Bakery</h3>
+            <p class="project-desc" data-i18n="p.bisou.desc">Bien plus qu'une vitrine : commande à table par QR code, panier, et suivi de la commande en temps réel.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>JavaScript</li><li>Supabase</li><li>Vercel</li><li>QR</li>
+            </ul>
+            <button class="project-view" type="button" data-dialog="case-bisou">
+              <span data-i18n="proj.view">Voir le projet</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="cover cover--mornaco" aria-hidden="true">
+            <span class="blob blob-a"></span>
+            <span class="blob blob-b"></span>
+            <span class="cover-word">MORNACO</span>
+            <span class="neon-line"></span>
+            <span class="cover-sub">COFFEE LOUNGE &amp; RESTAURANT · MORNAG</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta"><span data-i18n="p.mornaco.type">Site vitrine</span> · Mornag · 2026</p>
+            <h3>MORNACO</h3>
+            <p class="project-desc" data-i18n="p.mornaco.desc">L'identité du menu imprimé — turquoise, crème, néon violet — transformée en site one-page avec toute la carte : 11 catégories, ~200 articles.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>React</li><li>Vite</li><li>Vercel</li>
+            </ul>
+            <button class="project-view" type="button" data-dialog="case-mornaco">
+              <span data-i18n="proj.view">Voir le projet</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="cover cover--tarkan" aria-hidden="true">
+            <svg class="star8" viewBox="0 0 100 100" fill="none" stroke="#B8862E" stroke-width="1.5">
+              <rect x="22" y="22" width="56" height="56"/>
+              <rect x="22" y="22" width="56" height="56" transform="rotate(45 50 50)"/>
+            </svg>
+            <span class="cover-word serif">Tarkan</span>
+            <span class="cover-sub">RESTAURANT TURC · EZZAHRA</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta"><span data-i18n="p.tarkan.type">Site restaurant</span> · Ezzahra · 2026</p>
+            <h3>Tarkan</h3>
+            <p class="project-desc" data-i18n="p.tarkan.desc">Quatre pages, galerie photo et réservation WhatsApp pour le premier restaurant turc de la banlieue sud de Tunis.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>React</li><li>Tailwind v4</li><li>React Router</li>
+            </ul>
+            <button class="project-view" type="button" data-dialog="case-tarkan">
+              <span data-i18n="proj.view">Voir le projet</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="cover cover--porche" aria-hidden="true">
+            <span class="cover-word serif">Le Porche</span>
+            <span class="gold-rule"></span>
+            <span class="cover-sub">PÂTISSERIE FINE · ENNASR, ARIANA</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta"><span data-i18n="p.porche.type">Site pâtisserie fine</span> · Ariana · 2026</p>
+            <h3>Le Porche</h3>
+            <p class="project-desc" data-i18n="p.porche.desc">Crème, noir et or pour une pâtisserie fine d'Ennasr — collection signature Cubissimo et commande en ligne comprises.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>JavaScript</li><li>Supabase</li><li>CSS sur-mesure</li>
+            </ul>
+            <button class="project-view" type="button" data-dialog="case-porche">
+              <span data-i18n="proj.view">Voir le projet</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="cover cover--ps5" aria-hidden="true">
+            <span class="glow"></span>
+            <span class="cover-word">PS5&nbsp;MANAGER</span>
+            <span class="cover-sub">GAMING CAFÉ · DESKTOP + MOBILE</span>
+            <svg class="ps-shapes" viewBox="0 0 152 24" fill="none" stroke="#2E8BFF" stroke-width="2" stroke-linejoin="round">
+              <path d="M12 3 21 20H3Z"/>
+              <circle cx="55" cy="12" r="9"/>
+              <path d="M83 3l18 18M101 3 83 21"/>
+              <rect x="129" y="3" width="18" height="18"/>
+            </svg>
+          </div>
+          <div class="project-body">
+            <p class="project-meta"><span data-i18n="p.ps5.type">Application desktop &amp; mobile</span> · 2026</p>
+            <h3>PS5 Manager</h3>
+            <p class="project-desc" data-i18n="p.ps5.desc">Gestion des postes PS5 et billards d'un gaming café : chronométrage, facturation à la tranche, reçus imprimables, accès mobile.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>Electron</li><li>React</li><li>SQLite</li><li>PWA / Android</li>
+            </ul>
+            <button class="project-view" type="button" data-dialog="case-ps5">
+              <span data-i18n="proj.view">Voir le projet</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="cover cover--douane" aria-hidden="true">
+            <svg class="agents-motif" viewBox="0 0 168 56" fill="none" stroke="#7FB2E5" stroke-width="1.75">
+              <circle cx="14" cy="14" r="9"/><circle cx="49" cy="14" r="9"/><circle cx="84" cy="14" r="9"/><circle cx="119" cy="14" r="9"/><circle cx="154" cy="14" r="9"/>
+              <circle cx="14" cy="42" r="9"/><circle cx="49" cy="42" r="9"/><circle cx="84" cy="42" r="9"/><circle cx="119" cy="42" r="9"/><circle cx="154" cy="42" r="9"/>
+            </svg>
+            <span class="cover-word">DOUANE&nbsp;MANAGER</span>
+            <span class="cover-sub">CABINET DE DOUANE · 10 AGENTS IA</span>
+          </div>
+          <div class="project-body">
+            <p class="project-meta"><span data-i18n="p.douane.type">Logiciel de gestion · IA</span> · Radès · 2026</p>
+            <h3>Douane Manager</h3>
+            <p class="project-desc" data-i18n="p.douane.desc">Un logiciel complet pour un cabinet de commissionnaire en douane, assisté par 10 agents IA — l'IA propose, le professionnel valide.</p>
+            <ul class="chips" aria-label="Technologies">
+              <li>React</li><li>Vite</li><li>Agents IA</li><li>API Claude</li>
+            </ul>
+            <button class="project-view" type="button" data-dialog="case-douane">
+              <span data-i18n="proj.view">Voir le projet</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section container" id="services">
+      <header class="section-head reveal">
+        <p class="kicker"><span>02</span><span data-i18n="sec.services.kicker">Services</span></p>
+        <h2 data-i18n="sec.services.title">Ce que je peux <em>construire pour vous</em>.</h2>
+      </header>
+      <div class="services-grid">
+        <article class="service reveal">
+          <span class="service-num">S.01</span>
+          <h3 data-i18n="s1.title">Site vitrine</h3>
+          <p data-i18n="s1.desc">Un site rapide, élégant et fidèle à votre identité, pensé pour convaincre en quelques secondes.</p>
+          <ul>
+            <li data-i18n="s1.i1">Design sur-mesure</li>
+            <li data-i18n="s1.i2">Adapté mobile &amp; tablette</li>
+            <li data-i18n="s1.i3">Référencement local de base</li>
+          </ul>
+        </article>
+        <article class="service reveal">
+          <span class="service-num">S.02</span>
+          <h3 data-i18n="s2.title">Menu digital &amp; QR</h3>
+          <p data-i18n="s2.desc">Votre carte accessible d'un scan, modifiable en temps réel — fini les réimpressions de menus.</p>
+          <ul>
+            <li data-i18n="s2.i1">QR code à table</li>
+            <li data-i18n="s2.i2">Interface admin simple</li>
+            <li data-i18n="s2.i3">Panier de commande</li>
+          </ul>
+        </article>
+        <article class="service reveal">
+          <span class="service-num">S.03</span>
+          <h3 data-i18n="s3.title">Applications &amp; outils métier</h3>
+          <p data-i18n="s3.desc">Des outils qui collent à votre façon de travailler : gestion, facturation, assistants IA.</p>
+          <ul>
+            <li data-i18n="s3.i1">Web, desktop ou Android</li>
+            <li data-i18n="s3.i2">Données en temps réel</li>
+            <li data-i18n="s3.i3">Sur-mesure intégral</li>
+          </ul>
+        </article>
+        <article class="service reveal">
+          <span class="service-num">S.04</span>
+          <h3 data-i18n="s4.title">Mise en ligne &amp; accompagnement</h3>
+          <p data-i18n="s4.desc">Je m'occupe de tout : hébergement, nom de domaine, et je reste disponible après la livraison.</p>
+          <ul>
+            <li data-i18n="s4.i1">Déploiement (Vercel)</li>
+            <li data-i18n="s4.i2">Nom de domaine</li>
+            <li data-i18n="s4.i3">Support après livraison</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ MÉTHODE ============ -->
+    <section class="section container" id="methode">
+      <header class="section-head reveal">
+        <p class="kicker"><span>03</span><span data-i18n="sec.method.kicker">Méthode</span></p>
+        <h2 data-i18n="sec.method.title">Simple, clair, <em>sans surprise</em>.</h2>
+      </header>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num">1</span>
+          <h3 data-i18n="m1.title">Échange</h3>
+          <p data-i18n="m1.desc">On discute de votre activité, vos clients et ce que le site doit accomplir. Gratuit et sans engagement.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">2</span>
+          <h3 data-i18n="m2.title">Proposition</h3>
+          <p data-i18n="m2.desc">Vous recevez une maquette et un devis clair, avec un périmètre et un délai précis.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">3</span>
+          <h3 data-i18n="m3.title">Développement</h3>
+          <p data-i18n="m3.desc">Je construis le site et vous suivez l'avancement — vos retours sont intégrés au fur et à mesure.</p>
+        </li>
+        <li class="step reveal">
+          <span class="step-num">4</span>
+          <h3 data-i18n="m4.title">Lancement</h3>
+          <p data-i18n="m4.desc">Mise en ligne, vérifications finales, et je reste disponible pour la suite.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ À PROPOS ============ -->
+    <section class="section container" id="apropos">
+      <header class="section-head reveal">
+        <p class="kicker"><span>04</span><span data-i18n="sec.about.kicker">À propos</span></p>
+        <h2 data-i18n="sec.about.title">Derrière le code, <em>une obsession du détail</em>.</h2>
+      </header>
+      <div class="about-grid">
+        <div class="about-card reveal" aria-hidden="true">
+          <span class="about-mono">MM</span>
+          <span class="about-role" data-i18n="about.role">Développeur web — Tunis</span>
+        </div>
+        <div class="about-text">
+          <p class="reveal" data-i18n="about.p1">Développeur web freelance basé à Tunis, je travaille avec les cafés, restaurants et entreprises qui veulent exister en ligne autrement qu'avec une simple page Facebook.</p>
+          <p class="reveal" data-i18n="about.p2">Mon approche : partir de votre identité réelle — votre menu, vos couleurs, votre ambiance — et la traduire en un site que vos clients ont envie d'ouvrir. Chaque projet est construit à la main, sans template.</p>
+          <div class="about-meta reveal">
+            <div>
+              <h3 data-i18n="about.stack.label">Outils &amp; technologies</h3>
+              <ul class="chips">
+                <li>React</li><li>Vite</li><li>Tailwind CSS</li><li>JavaScript</li><li>Node.js</li>
+                <li>Electron</li><li>SQLite</li><li>Supabase</li><li>Agents IA</li><li>PWA</li><li>Vercel</li>
+              </ul>
+            </div>
+            <div>
+              <h3 data-i18n="about.langs.label">Langues</h3>
+              <ul class="chips">
+                <li data-i18n="about.lang1">Arabe</li><li data-i18n="about.lang2">Français</li><li data-i18n="about.lang3">Anglais</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="timeline reveal">
+            <li>
+              <span class="tl-date">2026</span>
+              <div>
+                <h3 data-i18n="tl1.title">Freelance — sites &amp; commande en ligne pour la restauration</h3>
+                <p data-i18n="tl1.desc">BISOU (en ligne), Le Porche, Mornaco, Tarkan : vitrines, cartes complètes et commande à table pour des établissements tunisiens.</p>
+              </div>
+            </li>
+            <li>
+              <span class="tl-date">2026</span>
+              <div>
+                <h3 data-i18n="tl2.title">Outils métier &amp; IA</h3>
+                <p data-i18n="tl2.desc">PS5 Manager (gaming café, desktop + mobile) et Douane Manager, logiciel de gestion douanière assisté par 10 agents IA.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      TÉMOIGNAGES — section prête, désactivée par défaut.
+      Quand vous avez de vraies citations clients, retirez ce commentaire
+      et remplacez les textes. Ne publiez jamais de faux témoignages.
+
+    <section class="section container" id="temoignages">
+      <header class="section-head reveal">
+        <p class="kicker"><span>05</span><span>Témoignages</span></p>
+        <h2>Ce que disent <em>mes clients</em>.</h2>
+      </header>
+      <div class="quotes-grid">
+        <blockquote class="quote reveal">
+          <p>« Citation du client ici. »</p>
+          <footer>Nom — Établissement</footer>
+        </blockquote>
+      </div>
+    </section>
+    -->
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section container contact" id="contact">
+      <p class="kicker reveal"><span>05</span><span data-i18n="sec.contact.kicker">Contact</span></p>
+      <h2 class="contact-title reveal" data-i18n="contact.title">Un projet en tête ? <em>Parlons-en.</em></h2>
+      <p class="contact-sub reveal" data-i18n="contact.sub">Racontez-moi votre activité en quelques lignes — je réponds sous 24 h avec des premières pistes.</p>
+      <div class="contact-actions reveal">
+        <a class="btn btn-accent btn-lg" href="mailto:melekmaazaoui41@gmail.com">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          melekmaazaoui41@gmail.com
+        </a>
+        <button class="btn btn-ghost btn-lg" id="copy-email" type="button" data-email="melekmaazaoui41@gmail.com">
+          <svg class="ic-copy" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <svg class="ic-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="m4 12 5 5L20 7"/></svg>
+          <span data-i18n="contact.copy">Copier l'email</span>
+        </button>
+      </div>
+      <ul class="contact-meta reveal">
+        <li>Tunis, Tunisie</li>
+        <li><span data-i18n="contact.time">Heure locale</span> — <span id="local-time">--:--</span></li>
+        <li><span class="pulse pulse-sm" aria-hidden="true"></span><span data-i18n="contact.avail">Disponible pour de nouveaux projets</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Melek Maazaoui — <span data-i18n="footer.credit">conçu et développé à la main</span>.</p>
+      <a class="to-top" href="#top">
+        <span data-i18n="footer.top">Haut de page</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m-7 7 7-7 7 7"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ============ CASE STUDY DIALOGS ============ -->
+  <dialog class="case" id="case-bisou" aria-labelledby="case-bisou-title">
+    <div class="case-bar" style="--bar:#8B1A1A"></div>
+    <button class="case-close" type="button" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <p class="case-type"><span data-i18n="p.bisou.type">Site + commande en ligne</span> · 2026</p>
+    <h3 id="case-bisou-title">BISOU — Coffee &amp; Bakery</h3>
+    <h4 data-i18n="case.context">Contexte</h4>
+    <p data-i18n="d.bisou.ctx">Le café BISOU voulait plus qu'une simple vitrine : permettre à ses clients de commander depuis la table et de suivre leur commande en direct.</p>
+    <h4 data-i18n="case.work">Ce que j'ai fait</h4>
+    <ul class="case-list">
+      <li data-i18n="d.bisou.w1">Menu par catégories avec panier flottant et checkout, confirmation de commande par scan QR à la table.</li>
+      <li data-i18n="d.bisou.w2">Suivi de commande en temps réel (en attente → en préparation → prêt → servi) et interface d'administration pour l'équipe.</li>
+      <li data-i18n="d.bisou.w3">En production sur Vercel avec Supabase — chaque mise à jour se déploie automatiquement.</li>
+    </ul>
+    <h4 data-i18n="case.stack">Stack</h4>
+    <ul class="chips"><li>JavaScript</li><li>Supabase</li><li>Vercel</li><li>QR codes</li></ul>
+    <a class="btn btn-accent btn-sm case-link" href="https://caffe-bisou-silk.vercel.app" target="_blank" rel="noopener">
+      <span data-i18n="case.visit">Visiter le site en ligne</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+    </a>
+  </dialog>
+
+  <dialog class="case" id="case-mornaco" aria-labelledby="case-mornaco-title">
+    <div class="case-bar" style="--bar:#3CB9A0"></div>
+    <button class="case-close" type="button" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <p class="case-type"><span data-i18n="p.mornaco.type">Site vitrine</span> · Mornag · 2026</p>
+    <h3 id="case-mornaco-title">MORNACO — Coffee Lounge &amp; Restaurant</h3>
+    <h4 data-i18n="case.context">Contexte</h4>
+    <p data-i18n="d.mornaco.ctx">MORNACO avait une identité visuelle forte sur son menu imprimé — turquoise, crème, néon violet — mais aucune présence en ligne.</p>
+    <h4 data-i18n="case.work">Ce que j'ai fait</h4>
+    <ul class="case-list">
+      <li data-i18n="d.mornaco.w1">Site one-page reprenant fidèlement l'identité du menu imprimé, jusqu'à l'enseigne néon recréée en CSS.</li>
+      <li data-i18n="d.mornaco.w2">Carte complète — 11 catégories, environ 200 articles — avec onglets, tous les prix modifiables dans un seul fichier.</li>
+      <li data-i18n="d.mornaco.w3">Intégration des vraies photos de l'établissement, optimisé mobile et performance.</li>
+    </ul>
+    <h4 data-i18n="case.stack">Stack</h4>
+    <ul class="chips"><li>React</li><li>Vite</li><li>CSS sur-mesure</li><li>Vercel</li></ul>
+  </dialog>
+
+  <dialog class="case" id="case-tarkan" aria-labelledby="case-tarkan-title">
+    <div class="case-bar" style="--bar:#B03A2E"></div>
+    <button class="case-close" type="button" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <p class="case-type"><span data-i18n="p.tarkan.type">Site restaurant</span> · Ezzahra · 2026</p>
+    <h3 id="case-tarkan-title">Tarkan — Restaurant turc</h3>
+    <h4 data-i18n="case.context">Contexte</h4>
+    <p data-i18n="d.tarkan.ctx">Premier restaurant de spécialités turques de la banlieue sud de Tunis, très bien noté — mais sans aucun site web.</p>
+    <h4 data-i18n="case.work">Ce que j'ai fait</h4>
+    <ul class="case-list">
+      <li data-i18n="d.tarkan.w1">Site 4 pages : accueil, menu à onglets, galerie avec lightbox, contact avec réservation via WhatsApp.</li>
+      <li data-i18n="d.tarkan.w2">Palette terracotta et or inspirée de la cuisine au charbon, motif ottoman dessiné sur-mesure.</li>
+      <li data-i18n="d.tarkan.w3">Animations au scroll respectant les préférences de mouvement réduit.</li>
+    </ul>
+    <h4 data-i18n="case.stack">Stack</h4>
+    <ul class="chips"><li>React</li><li>Vite</li><li>Tailwind CSS v4</li><li>React Router</li></ul>
+  </dialog>
+
+  <dialog class="case" id="case-porche" aria-labelledby="case-porche-title">
+    <div class="case-bar" style="--bar:#C8A87A"></div>
+    <button class="case-close" type="button" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <p class="case-type"><span data-i18n="p.porche.type">Site pâtisserie fine</span> · Ariana · 2026</p>
+    <h3 id="case-porche-title">Le Porche — Pâtisserie fine &amp; café lounge</h3>
+    <h4 data-i18n="case.context">Contexte</h4>
+    <p data-i18n="d.porche.ctx">Le Porche, pâtisserie fine et café lounge à Ennasr (Ariana), avait besoin d'une présence en ligne à la hauteur de son positionnement haut de gamme.</p>
+    <h4 data-i18n="case.work">Ce que j'ai fait</h4>
+    <ul class="case-list">
+      <li data-i18n="d.porche.w1">Identité stricte crème, noir et or, typographies élégantes — le luxe par la retenue.</li>
+      <li data-i18n="d.porche.w2">Carte de 49 créations en 8 catégories, dont la collection signature Cubissimo et les options de café de spécialité.</li>
+      <li data-i18n="d.porche.w3">Commande en ligne complète (panier, checkout, suivi) réutilisant le système éprouvé de BISOU.</li>
+    </ul>
+    <h4 data-i18n="case.stack">Stack</h4>
+    <ul class="chips"><li>JavaScript</li><li>Supabase</li><li>CSS sur-mesure</li></ul>
+  </dialog>
+
+  <dialog class="case" id="case-ps5" aria-labelledby="case-ps5-title">
+    <div class="case-bar" style="--bar:#2E8BFF"></div>
+    <button class="case-close" type="button" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <p class="case-type"><span data-i18n="p.ps5.type">Application desktop &amp; mobile</span> · 2026</p>
+    <h3 id="case-ps5-title">PS5 Manager — Gaming café</h3>
+    <h4 data-i18n="case.context">Contexte</h4>
+    <p data-i18n="d.ps5.ctx">Un gaming café devait gérer ses postes PS5 et ses billards — sessions FIFA/EA FC, temps de jeu, facturation — sans logiciel adapté sur le marché.</p>
+    <h4 data-i18n="case.work">Ce que j'ai fait</h4>
+    <ul class="case-list">
+      <li data-i18n="d.ps5.w1">Chronométrage temps réel par poste, facturation à la tranche avec tarifs modifiables, billard au prorata, historique et export CSV.</li>
+      <li data-i18n="d.ps5.w2">Détection automatique des matchs FIFA/EA FC via l'API PSN, reçus imprimables (thermique 80 mm), données 100 % locales (SQLite).</li>
+      <li data-i18n="d.ps5.w3">App desktop Windows (Electron) + accès mobile sur le WiFi du café : PWA installable et APK Android.</li>
+    </ul>
+    <h4 data-i18n="case.stack">Stack</h4>
+    <ul class="chips"><li>Electron</li><li>React</li><li>SQLite</li><li>PWA / Android</li></ul>
+  </dialog>
+
+  <dialog class="case" id="case-douane" aria-labelledby="case-douane-title">
+    <div class="case-bar" style="--bar:#7FB2E5"></div>
+    <button class="case-close" type="button" aria-label="Fermer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <p class="case-type"><span data-i18n="p.douane.type">Logiciel de gestion · IA</span> · Radès · 2026</p>
+    <h3 id="case-douane-title">Douane Manager — Cabinet de douane</h3>
+    <h4 data-i18n="case.context">Contexte</h4>
+    <p data-i18n="d.douane.ctx">Un cabinet de commissionnaire en douane gérait dossiers, déclarations et facturation à la main — un processus lent et sensible aux erreurs.</p>
+    <h4 data-i18n="case.work">Ce que j'ai fait</h4>
+    <ul class="case-list">
+      <li data-i18n="d.douane.w1">Logiciel complet : pipeline de dossier en 11 étapes, gestion clients, facturation avec TVA et barème, archivage légal.</li>
+      <li data-i18n="d.douane.w2">10 agents IA spécialisés (extraction documentaire, classification SH, calcul des droits, préparation des déclarations…) — l'IA propose, le commissionnaire agréé valide toujours.</li>
+      <li data-i18n="d.douane.w3">Interface 100 % en français, mode démo complet sans clé API, sauvegarde et restauration intégrales des données.</li>
+    </ul>
+    <h4 data-i18n="case.stack">Stack</h4>
+    <ul class="chips"><li>React</li><li>Vite</li><li>Agents IA</li><li>API Claude</li></ul>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
