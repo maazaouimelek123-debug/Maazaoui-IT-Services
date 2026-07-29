@@ -59,6 +59,13 @@
     'p.douane.type': 'Management software · AI',
     'p.douane.status': 'In progress',
     'p.douane.desc': 'Complete software for a customs brokerage office, assisted by 10 AI agents — AI drafts, the licensed broker validates.',
+    'p.caisse.type': 'Management application',
+    'p.caisse.status': 'In progress',
+    'p.caisse.desc': 'Tracking cash handed to field agents and its justification by invoice, per-company budgets and automatic reminders.',
+    'p.ejrijarri.type': 'E-commerce website',
+    'p.ejrijarri.desc': 'A Tunisian football card game: 330 cards, online shop and cash-on-delivery anywhere in Tunisia.',
+    'p.misterm.type': 'Website + online ordering',
+    'p.misterm.desc': 'Tea room and restaurant in Mornag: full menu, cart, real-time order tracking and a staff area.',
     'sec.services.kicker': 'Services',
     'sec.services.title': 'What I can <em>build for you</em>.',
     's1.title': 'Showcase website',
@@ -139,7 +146,19 @@
     'd.douane.ctx': 'A customs brokerage office was managing files, declarations and invoicing by hand — a slow, error-prone process.',
     'd.douane.w1': 'Complete software: an 11-step file pipeline, client management, invoicing with VAT and fee schedule, legal archiving.',
     'd.douane.w2': '10 specialised AI agents (document extraction, HS classification, duty calculation, declaration drafting…) — AI drafts, the licensed broker always validates.',
-    'd.douane.w3': '100% French interface, full demo mode without an API key, complete data backup and restore.'
+    'd.douane.w3': '100% French interface, full demo mode without an API key, complete data backup and restore.',
+    'd.caisse.ctx': 'A company was handing cash to its field agents with no reliable way to track amounts justified by invoice.',
+    'd.caisse.w1': 'Per-agent tracking of cash handed out and supporting invoices, with expense categories and an instant visual status.',
+    'd.caisse.w2': 'Per-company cash budget with automatic countdown and overspend warnings, history and summary.',
+    'd.caisse.w3': 'PIN-protected access, automatic SMS reminders to agents, installable app (PWA).',
+    'd.ejrijarri.ctx': 'A physical card game built around Tunisian football needed an online shop to sell nationwide.',
+    'd.ejrijarri.w1': "Showcase and shop: the game presented at a glance (330 cards, 12 categories, 7 special cards) with the rules front and centre.",
+    'd.ejrijarri.w2': 'Online ordering with cash on delivery, shipping anywhere in Tunisia.',
+    'd.ejrijarri.w3': 'Festive design in football colours, built to convince in seconds on mobile.',
+    'd.misterm.ctx': 'Mister M, a tea room and restaurant in Mornag, wanted its full menu online and smooth ordering from the table.',
+    'd.misterm.w1': 'Full menu across 9 categories — coffee, ice treats, mojitos, pastries, crêpes, restaurant and shisha — with cart and online ordering.',
+    'd.misterm.w2': 'Real-time order tracking (received → preparing → ready → served) and a dedicated staff area.',
+    'd.misterm.w3': 'Black, gold and cream identity, designed for a warm room with a family corner and a big screen.'
   };
 
   var META = {

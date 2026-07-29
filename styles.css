@@ -625,6 +625,50 @@ h1 em, h2 em {
 }
 .project:hover .agents-motif { opacity: 1; }
 
+/* Caisse Tracker — acier industriel */
+.cover--caisse { background: linear-gradient(160deg, #23272B, #15181B); }
+.cover--caisse .cover-word { color: #EDEFF1; letter-spacing: 0.08em; font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
+.cover--caisse .cover-sub { color: rgba(237, 239, 241, 0.6); }
+.ledger-motif {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  width: 130px;
+  opacity: 0.8;
+  transition: transform 0.4s ease;
+}
+.project:hover .ledger-motif { transform: translateX(-4px); }
+
+/* Ejry & Jarry — pelouse, crème, football */
+.cover--ejrijarri { background: linear-gradient(155deg, #1C7A4C, #0F5A3A); }
+.cover--ejrijarri .cover-word { color: #F8F4E6; letter-spacing: 0.06em; }
+.cover--ejrijarri .cover-sub { color: rgba(248, 244, 230, 0.72); }
+.cards-motif {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 108px;
+  opacity: 0.92;
+  transition: transform 0.4s ease;
+}
+.project:hover .cards-motif { transform: translateY(-4px) rotate(-3deg); }
+
+/* Mister M Coffee — noir, or, crème */
+.cover--misterm { background: linear-gradient(160deg, #1B1917, #111010); }
+.cover--misterm .cover-word { color: #F6F2E9; }
+.cover--misterm .cover-sub { color: rgba(246, 242, 233, 0.65); }
+.gold-rule-2 { position: relative; z-index: 1; width: 80px; height: 1.5px; background: #C8A24B; }
+.misterm-motif {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 50px;
+  height: 50px;
+  opacity: 0.85;
+  transition: transform 0.4s ease;
+}
+.project:hover .misterm-motif { transform: scale(1.08); }
+
 /* Project body */
 .project-body {
   display: flex;
