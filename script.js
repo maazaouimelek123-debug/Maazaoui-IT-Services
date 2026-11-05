@@ -169,6 +169,8 @@
       langBtnLabel: 'Switch to English',
       menuLabel: 'Ouvrir le menu',
       closeLabel: 'Fermer',
+      themeToDark: 'Passer en mode sombre',
+      themeToLight: 'Passer en mode clair',
       copied: 'Copié !'
     },
     en: {
@@ -178,6 +180,8 @@
       langBtnLabel: 'Passer en français',
       menuLabel: 'Open menu',
       closeLabel: 'Close',
+      themeToDark: 'Switch to dark mode',
+      themeToLight: 'Switch to light mode',
       copied: 'Copied!'
     }
   };
@@ -210,9 +214,58 @@
       btn.setAttribute('aria-label', META[lang].closeLabel);
     });
     currentLang = lang;
+    updateThemeButton();
     try { localStorage.setItem('lang', lang); } catch (e) { /* stockage indisponible */ }
     updateClock();
   }
+
+  /* ============ Thème clair / sombre ============
+     Le thème initial est posé dans <head> (sans flash). Ici : le bouton,
+     la mémorisation du choix, et le suivi du système tant que
+     l'utilisateur n'a rien choisi. */
+  var root = document.documentElement;
+  var themeBtn = document.getElementById('theme-toggle');
+  var darkQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+  function currentTheme() {
+    return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  }
+
+  function updateThemeButton() {
+    if (!themeBtn) return;
+    var dark = currentTheme() === 'dark';
+    var labels = META[currentLang] || META.fr;
+    themeBtn.setAttribute('aria-label', dark ? labels.themeToLight : labels.themeToDark);
+    themeBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+  }
+
+  function applyTheme(theme, animate) {
+    if (animate && !reduceMotion) {
+      root.classList.add('theme-anim');
+      setTimeout(function () { root.classList.remove('theme-anim'); }, 400);
+    }
+    root.setAttribute('data-theme', theme);
+    updateThemeButton();
+  }
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var next = currentTheme() === 'dark' ? 'light' : 'dark';
+      applyTheme(next, true);
+      try { localStorage.setItem('theme', next); } catch (e) { /* stockage indisponible */ }
+    });
+  }
+
+  if (darkQuery) {
+    var onSystemChange = function (e) {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (err) { /* stockage indisponible */ }
+      if (saved !== 'light' && saved !== 'dark') applyTheme(e.matches ? 'dark' : 'light', true);
+    };
+    if (darkQuery.addEventListener) darkQuery.addEventListener('change', onSystemChange);
+    else if (darkQuery.addListener) darkQuery.addListener(onSystemChange);
+  }
+  updateThemeButton();
 
   var storedLang = null;
   try { storedLang = localStorage.getItem('lang'); } catch (e) { /* stockage indisponible */ }

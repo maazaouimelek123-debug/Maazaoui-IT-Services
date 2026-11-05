@@ -8,7 +8,20 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Melek Maazaoui — Développeur web freelance">
   <meta property="og:description" content="Sites vitrines, menus digitaux QR et outils métier pour cafés, restaurants et commerces.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0D'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23C6F24E' text-anchor='middle'%3EM.%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#F6F8FC" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B1220" media="(prefers-color-scheme: dark)">
+  <script>
+    /* Applique le thème avant l'affichage pour éviter un flash de la mauvaise couleur */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232447D1'/%3E%3Ctext x='29' y='42' font-family='Arial,sans-serif' font-size='30' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3EM%3C/text%3E%3Ccircle cx='48' cy='40' r='3.5' fill='%236CC3FF'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
@@ -40,6 +53,10 @@
         <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Passer en mode sombre" aria-pressed="false">
+          <svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
         <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch to English">EN</button>
         <a class="btn btn-accent btn-sm nav-cta" href="#contact" data-i18n="nav.cta">Discutons</a>
         <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
@@ -122,7 +139,7 @@
     <section class="section container" id="projets">
       <header class="section-head reveal">
         <p class="kicker"><span>01</span><span data-i18n="sec.projects.kicker">Projets sélectionnés</span></p>
-        <h2 data-i18n="sec.projects.title">Du travail réel, pour des <em>clients réels</em>.</h2>
+        <h2 data-i18n="sec.projects.title">Du travail concret, pour de <em>vrais clients</em>.</h2>
         <p class="section-sub" data-i18n="sec.projects.sub">Chaque projet part de l'identité du client — ses couleurs, sa carte, son ambiance — et la traduit en une expérience en ligne.</p>
       </header>
 

@@ -2,24 +2,116 @@
    Melek Maazaoui — Portfolio
    Design tokens
    ============================================================ */
+/* Palette « Méditerranée 1C » : bleu roi pour les actions, bleu clair en accent.
+   --accent     : bleu roi — boutons, liens, petits textes d'accent
+   --sky        : bleu clair — formes décoratives (points, losanges, filets)
+   --sky-text   : bleu clair lisible en texte (titres en italique)
+   Mode clair par défaut ; mode sombre via [data-theme="dark"] ou le réglage système. */
 :root {
-  --bg: #0A0A0D;
-  --bg-soft: #101014;
-  --card: #121217;
-  --line: rgba(244, 244, 241, 0.09);
-  --line-strong: rgba(244, 244, 241, 0.22);
-  --text: #F4F4F1;
-  --text-soft: #D6D6DA;
-  --muted: #A6A6B0;
-  --accent: #C6F24E;
-  --accent-bright: #D4FA66;
-  --accent-ink: #141807;
-  --accent-soft: rgba(198, 242, 78, 0.12);
+  color-scheme: light;
+  --bg: #F6F8FC;
+  --bg-soft: #EEF2F9;
+  --card: #FFFFFF;
+  --card-deep: #EEF2F9;
+  --raised: #FFFFFF;
+  --line: rgba(14, 27, 42, 0.10);
+  --line-strong: rgba(14, 27, 42, 0.22);
+  --text: #0E1B2A;
+  --text-soft: #2A3A4C;
+  --muted: #55697A;
+  --accent: #2447D1;
+  --accent-bright: #1E3BB3;
+  --accent-ink: #FFFFFF;
+  --accent-soft: rgba(36, 71, 209, 0.10);
+  --accent-shadow: rgba(36, 71, 209, 0.25);
+  --sky: #3BA3EE;
+  --sky-text: #1C8AD9;
+  --sky-glow: rgba(59, 163, 238, 0.45);
+  --tint: rgba(14, 27, 42, 0.03);
+  --header-bg: rgba(246, 248, 252, 0.85);
+  --menu-bg: rgba(246, 248, 252, 0.97);
+  --scroll-thumb: #C9D2E0;
+  --scroll-thumb-hover: #AEB9CB;
+  --halo-1: rgba(36, 71, 209, 0.07);
+  --halo-2: rgba(59, 163, 238, 0.08);
+  --grain-opacity: 0.025;
   --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
   --font-body: 'Inter', 'Segoe UI', sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
   --radius: 20px;
   --header-h: 4.25rem;
+}
+
+/* Mode sombre — choisi manuellement */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0B1220;
+  --bg-soft: #0F1828;
+  --card: #141D33;
+  --card-deep: #0E1626;
+  --raised: #18223A;
+  --line: rgba(230, 236, 245, 0.09);
+  --line-strong: rgba(230, 236, 245, 0.22);
+  --text: #E6ECF5;
+  --text-soft: #C3CDDD;
+  --muted: #8E9CB8;
+  --accent: #7B93FF;
+  --accent-bright: #95A8FF;
+  --accent-ink: #0A1440;
+  --accent-soft: rgba(123, 147, 255, 0.14);
+  --accent-shadow: rgba(123, 147, 255, 0.28);
+  --sky: #6CC3FF;
+  --sky-text: #6CC3FF;
+  --sky-glow: rgba(108, 195, 255, 0.45);
+  --tint: rgba(255, 255, 255, 0.02);
+  --header-bg: rgba(11, 18, 32, 0.82);
+  --menu-bg: rgba(11, 18, 32, 0.97);
+  --scroll-thumb: #222D45;
+  --scroll-thumb-hover: #2E3B58;
+  --halo-1: rgba(123, 147, 255, 0.09);
+  --halo-2: rgba(108, 195, 255, 0.05);
+  --grain-opacity: 0.035;
+}
+
+/* Mode sombre — suivi du réglage système quand aucun choix manuel n'est enregistré */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0B1220;
+    --bg-soft: #0F1828;
+    --card: #141D33;
+    --card-deep: #0E1626;
+    --raised: #18223A;
+    --line: rgba(230, 236, 245, 0.09);
+    --line-strong: rgba(230, 236, 245, 0.22);
+    --text: #E6ECF5;
+    --text-soft: #C3CDDD;
+    --muted: #8E9CB8;
+    --accent: #7B93FF;
+    --accent-bright: #95A8FF;
+    --accent-ink: #0A1440;
+    --accent-soft: rgba(123, 147, 255, 0.14);
+    --accent-shadow: rgba(123, 147, 255, 0.28);
+    --sky: #6CC3FF;
+    --sky-text: #6CC3FF;
+    --sky-glow: rgba(108, 195, 255, 0.45);
+    --tint: rgba(255, 255, 255, 0.02);
+    --header-bg: rgba(11, 18, 32, 0.82);
+    --menu-bg: rgba(11, 18, 32, 0.97);
+    --scroll-thumb: #222D45;
+    --scroll-thumb-hover: #2E3B58;
+    --halo-1: rgba(123, 147, 255, 0.09);
+    --halo-2: rgba(108, 195, 255, 0.05);
+    --grain-opacity: 0.035;
+  }
+}
+
+/* Transition douce lors du changement de thème (désactivée si mouvement réduit) */
+html.theme-anim,
+html.theme-anim *,
+html.theme-anim *::before,
+html.theme-anim *::after {
+  transition: background-color 0.35s ease, border-color 0.35s ease, color 0.35s ease !important;
 }
 
 /* ============ Base ============ */
@@ -47,8 +139,8 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(55rem 30rem at 78% -6rem, rgba(198, 242, 78, 0.07), transparent 65%),
-    radial-gradient(42rem 28rem at 8% 115%, rgba(198, 242, 78, 0.045), transparent 60%);
+    radial-gradient(55rem 30rem at 78% -6rem, var(--halo-1), transparent 65%),
+    radial-gradient(42rem 28rem at 8% 115%, var(--halo-2), transparent 60%);
 }
 
 .grain {
@@ -56,7 +148,7 @@ body::before {
   inset: 0;
   z-index: 60;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: var(--grain-opacity);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
 }
 
@@ -69,8 +161,8 @@ button { font: inherit; color: inherit; }
 
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: #26262C; border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: #33333B; }
+::-webkit-scrollbar-thumb { background: var(--scroll-thumb); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--scroll-thumb-hover); }
 
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -123,7 +215,7 @@ button { font: inherit; color: inherit; }
 .btn-accent:hover {
   background: var(--accent-bright);
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(198, 242, 78, 0.22);
+  box-shadow: 0 10px 30px var(--accent-shadow);
 }
 
 .btn-ghost {
@@ -151,7 +243,7 @@ button { font: inherit; color: inherit; }
   transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 .site-header.scrolled {
-  background: rgba(10, 10, 13, 0.82);
+  background: var(--header-bg);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border-bottom-color: var(--line);
@@ -244,6 +336,27 @@ button { font: inherit; color: inherit; }
 }
 .lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
+/* Bouton mode clair / sombre : affiche le soleil en sombre, la lune en clair */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.3s ease;
+}
+.theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-toggle:active { transform: rotate(20deg) scale(0.95); }
+.theme-toggle .ic-sun { display: none; }
+:root[data-theme="dark"] .theme-toggle .ic-sun { display: block; }
+:root[data-theme="dark"] .theme-toggle .ic-moon { display: none; }
+:root:not([data-theme]) .theme-toggle { display: none; } /* sans JavaScript : le thème suit le système */
+
 .menu-toggle {
   display: none;
   align-items: center;
@@ -264,7 +377,7 @@ button { font: inherit; color: inherit; }
   inset: 0;
   z-index: 90;
   padding: calc(var(--header-h) + 2rem) clamp(1.25rem, 5vw, 2.5rem) 2rem;
-  background: rgba(10, 10, 13, 0.97);
+  background: var(--menu-bg);
   -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
 }
@@ -304,22 +417,22 @@ button { font: inherit; color: inherit; }
   border-radius: 999px;
   font-size: 0.85rem;
   color: var(--muted);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--tint);
 }
 
 .pulse {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--sky);
   animation: pulse 2.2s ease-out infinite;
   flex-shrink: 0;
 }
 .pulse-sm { width: 7px; height: 7px; display: inline-block; margin-right: 0.4rem; }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(198, 242, 78, 0.45); }
-  70% { box-shadow: 0 0 0 9px rgba(198, 242, 78, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(198, 242, 78, 0); }
+  0% { box-shadow: 0 0 0 0 var(--sky-glow); }
+  70% { box-shadow: 0 0 0 9px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
 }
 .pulse-wip { background: #E8A33D; animation: none; box-shadow: none; }
 
@@ -338,7 +451,7 @@ h1 em, h2 em {
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0;
-  color: var(--accent);
+  color: var(--sky-text);
 }
 
 .hero-lede {
@@ -416,7 +529,7 @@ h1 em, h2 em {
   content: '';
   width: 7px;
   height: 7px;
-  background: var(--accent);
+  background: var(--sky);
   transform: rotate(45deg);
   flex-shrink: 0;
 }
@@ -777,7 +890,7 @@ h1 em, h2 em {
   top: 0.55em;
   width: 5px;
   height: 5px;
-  background: var(--accent);
+  background: var(--sky);
   transform: rotate(45deg);
 }
 
@@ -798,7 +911,7 @@ h1 em, h2 em {
   font-style: italic;
   font-size: 2.7rem;
   line-height: 1;
-  color: var(--accent);
+  color: var(--sky-text);
 }
 .step h3 {
   margin: 0.9rem 0 0.5rem;
@@ -824,7 +937,7 @@ h1 em, h2 em {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background: linear-gradient(165deg, var(--card), #0D0D11);
+  background: linear-gradient(165deg, var(--card), var(--card-deep));
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -835,7 +948,7 @@ h1 em, h2 em {
   position: absolute;
   font-family: var(--font-display);
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--sky);
   opacity: 0.8;
 }
 .about-card::before { top: 0.9rem; left: 1.1rem; }
@@ -966,9 +1079,9 @@ h1 em, h2 em {
   max-height: 85dvh;
   margin: auto;
   padding: 2.1rem 2.1rem 2.3rem;
-  background: #131318;
+  background: var(--raised);
   color: var(--text);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--line-strong);
   border-radius: var(--radius);
   overflow-x: hidden;
   overflow-y: auto;
@@ -1050,7 +1163,7 @@ h1 em, h2 em {
   top: 0.58em;
   width: 5px;
   height: 5px;
-  background: var(--accent);
+  background: var(--sky);
   transform: rotate(45deg);
 }
 .case-link { margin-top: 1.7rem; }

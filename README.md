@@ -1,6 +1,7 @@
 # Portfolio — Melek Maazaoui
 
-Site portfolio statique (HTML/CSS/JS, sans build) : sombre, éditorial, bilingue **FR/EN**.
+Site portfolio statique (HTML/CSS/JS, sans build) : éditorial, bilingue **FR/EN**,
+avec **mode clair et mode sombre** (palette « Méditerranée » bleu roi + bleu clair).
 Les 6 projets présentés sont vos vrais projets (BISOU, Mornaco, Tarkan, Le Porche,
 PS5 Manager, Douane Manager), chaque carte reprend les couleurs de la marque du client.
 BISOU pointe vers le site en ligne (caffe-bisou-silk.vercel.app).
@@ -26,7 +27,12 @@ npx http-server . -p 5510        # puis http://localhost:5510
 
 - **Textes FR** → modifier directement dans `index.html`.
 - **Textes EN** → modifier l'objet `EN` au début de `script.js` (mêmes clés `data-i18n`).
-- **Couleur d'accent** → `--accent` dans `styles.css` (`:root`).
+- **Couleurs** → en haut de `styles.css` : le bloc `:root` contient le mode clair,
+  `:root[data-theme="dark"]` et le bloc `@media (prefers-color-scheme: dark)` le mode
+  sombre (les deux blocs sombres doivent rester identiques).
+  `--accent` = bleu roi (boutons, liens), `--sky` / `--sky-text` = bleu clair (accents).
+- **Thème** : le site suit le réglage de l'appareil du visiteur ; le bouton soleil/lune
+  force un mode et le choix est mémorisé (`localStorage`, clé `theme`).
 - **Statistiques du hero** → chiffres dans la section `hero-stats` de `index.html`.
 - **Photo** : le bloc « MM » de la section À propos (`.about-card`) est prévu pour être
   remplacé par une vraie photo de vous — recommandé pour la confiance client.
