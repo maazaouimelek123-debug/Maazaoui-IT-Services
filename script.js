@@ -220,12 +220,11 @@
   }
 
   /* ============ Thème clair / sombre ============
-     Le thème initial est posé dans <head> (sans flash). Ici : le bouton,
-     la mémorisation du choix, et le suivi du système tant que
-     l'utilisateur n'a rien choisi. */
+     Le site s'ouvre en mode clair (posé dans <head>, sans flash).
+     Ici : le bouton soleil/lune et la mémorisation du choix du visiteur. */
   var root = document.documentElement;
   var themeBtn = document.getElementById('theme-toggle');
-  var darkQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  var themeColor = document.querySelector('meta[name="theme-color"]');
 
   function currentTheme() {
     return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
@@ -245,6 +244,7 @@
       setTimeout(function () { root.classList.remove('theme-anim'); }, 400);
     }
     root.setAttribute('data-theme', theme);
+    if (themeColor) themeColor.setAttribute('content', theme === 'dark' ? '#0B1220' : '#F6F8FC');
     updateThemeButton();
   }
 
@@ -256,15 +256,6 @@
     });
   }
 
-  if (darkQuery) {
-    var onSystemChange = function (e) {
-      var saved = null;
-      try { saved = localStorage.getItem('theme'); } catch (err) { /* stockage indisponible */ }
-      if (saved !== 'light' && saved !== 'dark') applyTheme(e.matches ? 'dark' : 'light', true);
-    };
-    if (darkQuery.addEventListener) darkQuery.addEventListener('change', onSystemChange);
-    else if (darkQuery.addListener) darkQuery.addListener(onSystemChange);
-  }
   updateThemeButton();
 
   var storedLang = null;

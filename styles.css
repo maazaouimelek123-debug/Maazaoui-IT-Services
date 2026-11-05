@@ -6,7 +6,7 @@
    --accent     : bleu roi — boutons, liens, petits textes d'accent
    --sky        : bleu clair — formes décoratives (points, losanges, filets)
    --sky-text   : bleu clair lisible en texte (titres en italique)
-   Mode clair par défaut ; mode sombre via [data-theme="dark"] ou le réglage système. */
+   Mode clair par défaut à l'arrivée ; mode sombre uniquement via le bouton ([data-theme="dark"]). */
 :root {
   color-scheme: light;
   --bg: #F6F8FC;
@@ -42,7 +42,7 @@
   --header-h: 4.25rem;
 }
 
-/* Mode sombre — choisi manuellement */
+/* Mode sombre — activé par le bouton soleil/lune */
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #0B1220;
@@ -71,39 +71,6 @@
   --halo-1: rgba(123, 147, 255, 0.09);
   --halo-2: rgba(108, 195, 255, 0.05);
   --grain-opacity: 0.035;
-}
-
-/* Mode sombre — suivi du réglage système quand aucun choix manuel n'est enregistré */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    color-scheme: dark;
-    --bg: #0B1220;
-    --bg-soft: #0F1828;
-    --card: #141D33;
-    --card-deep: #0E1626;
-    --raised: #18223A;
-    --line: rgba(230, 236, 245, 0.09);
-    --line-strong: rgba(230, 236, 245, 0.22);
-    --text: #E6ECF5;
-    --text-soft: #C3CDDD;
-    --muted: #8E9CB8;
-    --accent: #7B93FF;
-    --accent-bright: #95A8FF;
-    --accent-ink: #0A1440;
-    --accent-soft: rgba(123, 147, 255, 0.14);
-    --accent-shadow: rgba(123, 147, 255, 0.28);
-    --sky: #6CC3FF;
-    --sky-text: #6CC3FF;
-    --sky-glow: rgba(108, 195, 255, 0.45);
-    --tint: rgba(255, 255, 255, 0.02);
-    --header-bg: rgba(11, 18, 32, 0.82);
-    --menu-bg: rgba(11, 18, 32, 0.97);
-    --scroll-thumb: #222D45;
-    --scroll-thumb-hover: #2E3B58;
-    --halo-1: rgba(123, 147, 255, 0.09);
-    --halo-2: rgba(108, 195, 255, 0.05);
-    --grain-opacity: 0.035;
-  }
 }
 
 /* Transition douce lors du changement de thème (désactivée si mouvement réduit) */
@@ -355,7 +322,7 @@ button { font: inherit; color: inherit; }
 .theme-toggle .ic-sun { display: none; }
 :root[data-theme="dark"] .theme-toggle .ic-sun { display: block; }
 :root[data-theme="dark"] .theme-toggle .ic-moon { display: none; }
-:root:not([data-theme]) .theme-toggle { display: none; } /* sans JavaScript : le thème suit le système */
+:root:not([data-theme]) .theme-toggle { display: none; } /* sans JavaScript : le site reste en mode clair */
 
 .menu-toggle {
   display: none;

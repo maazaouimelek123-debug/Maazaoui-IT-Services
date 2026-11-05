@@ -28,11 +28,10 @@ npx http-server . -p 5510        # puis http://localhost:5510
 - **Textes FR** → modifier directement dans `index.html`.
 - **Textes EN** → modifier l'objet `EN` au début de `script.js` (mêmes clés `data-i18n`).
 - **Couleurs** → en haut de `styles.css` : le bloc `:root` contient le mode clair,
-  `:root[data-theme="dark"]` et le bloc `@media (prefers-color-scheme: dark)` le mode
-  sombre (les deux blocs sombres doivent rester identiques).
+  `:root[data-theme="dark"]` le mode sombre.
   `--accent` = bleu roi (boutons, liens), `--sky` / `--sky-text` = bleu clair (accents).
-- **Thème** : le site suit le réglage de l'appareil du visiteur ; le bouton soleil/lune
-  force un mode et le choix est mémorisé (`localStorage`, clé `theme`).
+- **Thème** : le site s'ouvre toujours en mode clair ; le bouton soleil/lune passe en
+  mode sombre et le choix est mémorisé (`localStorage`, clé `theme`).
 - **Statistiques du hero** → chiffres dans la section `hero-stats` de `index.html`.
 - **Photo** : le bloc « MM » de la section À propos (`.about-card`) est prévu pour être
   remplacé par une vraie photo de vous — recommandé pour la confiance client.
