@@ -11,7 +11,7 @@
 
   /* ============ i18n ============
      Le HTML contient le texte français (source de vérité).
-     Le dictionnaire ci-dessous contient la version anglaise.
+     Les dictionnaires ci-dessous contiennent les versions anglaise (EN) et arabe (AR).
      Le français est capturé depuis le DOM au chargement. */
 
   var EN = {
@@ -120,6 +120,7 @@
     'contact.copy': 'Copy email',
     'contact.time': 'Local time',
     'contact.avail': 'Available for new projects',
+    'contact.city': 'Tunis, Tunisia',
     'footer.credit': 'designed &amp; built by hand',
     'footer.top': 'Back to top',
     'case.context': 'Context',
@@ -163,12 +164,163 @@
     'd.misterm.w3': 'Black, gold and cream identity, designed for a warm room with a family corner and a big screen.'
   };
 
+  /* Version arabe (العربية) — affichée de droite à gauche (dir="rtl").
+     Les noms de marques, de clients et de technologies restent en caractères latins. */
+  var AR = {
+    'a11y.skip': 'الانتقال إلى المحتوى',
+    'nav.projects': 'المشاريع',
+    'nav.services': 'الخدمات',
+    'nav.method': 'المنهجية',
+    'nav.about': 'من أنا',
+    'nav.contact': 'تواصل',
+    'nav.cta': 'لنتحدث',
+    'hero.badge': 'متاح لمشاريع جديدة',
+    'hero.title': 'مواقع ويب تحوّل <em>الزوار إلى عملاء</em>.',
+    'hero.lede': 'أنا <a class="lede-link" href="https://www.linkedin.com/in/melek-maazaoui/" target="_blank" rel="noopener" aria-label="Melek Maazaoui على LinkedIn (يُفتح في علامة تبويب جديدة)">Melek Maazaoui</a>، مطوّر مواقع ويب مستقل مقيم في تونس. أصمّم مواقع تعريفية، ومنصات للطلب عبر الإنترنت، وحلولاً رقمية حسب الطلب تساعد الشركات والمطاعم والمقاهي على تعزيز حضورها على الإنترنت وإبراز صورتها.',
+    'hero.lede2': 'هدفي: تحويل أفكاركم إلى تجارب ويب عصرية وأنيقة وفعّالة، مصمّمة وفق احتياجاتكم واحتياجات عملائكم.',
+    'hero.cta1': 'شاهد مشاريعي',
+    'hero.cta2': 'تواصل معي',
+    'hero.stat1': 'مشاريع منجزة',
+    'hero.stat2': 'تصميم خاص، بلا قوالب جاهزة',
+    'hero.stat3': 'مدة الرد',
+    'mq.1': 'مواقع تعريفية',
+    'mq.2': 'قوائم رقمية QR',
+    'mq.3': 'تطبيقات ويب',
+    'mq.4': 'تصميم حسب الطلب',
+    'mq.5': 'الحجز عبر واتساب',
+    'mq.6': 'النشر والدعم',
+    'mq.7': 'أدوات الذكاء الاصطناعي',
+    'sec.projects.kicker': 'مشاريع مختارة',
+    'sec.projects.title': 'عمل ملموس، <em>لعملاء حقيقيين</em>.',
+    'sec.projects.sub': 'ينطلق كل مشروع من هوية العميل — ألوانه وقائمته وأجوائه — ليحوّلها إلى تجربة على الإنترنت.',
+    'proj.view': 'عرض المشروع',
+    'case.visit': 'زيارة الموقع',
+    'case.wip': 'قريباً',
+    'p.bisou.type': 'موقع + طلب عبر الإنترنت',
+    'p.bisou.live': 'متاح الآن',
+    'p.bisou.desc': 'أكثر من مجرد واجهة: طلب من الطاولة عبر رمز QR، وسلة طلبات، وتتبّع الطلب في الوقت الفعلي.',
+    'p.mornaco.type': 'موقع تعريفي',
+    'p.mornaco.desc': 'هوية القائمة المطبوعة — فيروزي وكريمي وبنفسجي نيون — تحوّلت إلى موقع من صفحة واحدة يضم القائمة كاملة: 11 فئة ونحو 200 صنف.',
+    'p.tarkan.type': 'موقع مطعم',
+    'p.tarkan.desc': 'أربع صفحات، ومعرض صور، وحجز عبر واتساب لأول مطعم تركي في الضاحية الجنوبية لتونس.',
+    'p.porche.type': 'موقع محل حلويات فاخرة',
+    'p.porche.status': 'قيد الإنجاز',
+    'p.porche.desc': 'الكريمي والأسود والذهبي لمحل حلويات فاخرة في النصر — مع مجموعة Cubissimo المميزة والطلب عبر الإنترنت.',
+    'p.ps5.type': 'تطبيق للحاسوب والهاتف',
+    'p.ps5.status': 'قيد الإنجاز',
+    'p.ps5.desc': 'إدارة أجهزة PS5 وطاولات البلياردو في مقهى ألعاب: توقيت، وفوترة حسب الشرائح، وإيصالات قابلة للطباعة، ونفاذ عبر الهاتف.',
+    'p.douane.type': 'برنامج تصرّف · ذكاء اصطناعي',
+    'p.douane.status': 'قيد الإنجاز',
+    'p.douane.desc': 'برنامج متكامل لمكتب وكيل ديواني، يساعده 10 وكلاء ذكاء اصطناعي — الذكاء الاصطناعي يقترح، والوكيل المعتمد يصادق.',
+    'p.caisse.type': 'تطبيق تصرّف',
+    'p.caisse.status': 'قيد الإنجاز',
+    'p.caisse.desc': 'متابعة الأموال النقدية المسلّمة للأعوان الميدانيين وتبريرها بالفواتير، مع ميزانيات لكل شركة وتذكيرات آلية.',
+    'p.ejrijarri.type': 'موقع تجارة إلكترونية',
+    'p.ejrijarri.desc': 'لعبة بطاقات تونسية حول كرة القدم: 330 بطاقة، ومتجر على الإنترنت، والدفع عند الاستلام في كامل أنحاء تونس.',
+    'p.misterm.type': 'موقع + طلب عبر الإنترنت',
+    'p.misterm.desc': 'قاعة شاي ومطعم في مرناق: قائمة كاملة، وسلة طلبات، وتتبّع الطلب في الوقت الفعلي، وفضاء خاص بالفريق.',
+    'sec.services.kicker': 'الخدمات',
+    'sec.services.title': 'اكتشف ما يمكنني <em>إنجازه لك</em>.',
+    's1.title': 'موقع تعريفي',
+    's1.desc': 'موقع سريع وأنيق يعكس هويتك، مصمّم ليُقنع في ثوانٍ.',
+    's1.i1': 'تصميم حسب الطلب',
+    's1.i2': 'متوافق مع الهاتف واللوحة',
+    's1.i3': 'تحسين أساسي للظهور المحلي',
+    's2.title': 'قائمة رقمية ورمز QR',
+    's2.desc': 'قائمتك على بُعد مسح واحد، قابلة للتعديل فوراً — وداعاً لإعادة الطباعة.',
+    's2.i1': 'رمز QR على الطاولة',
+    's2.i2': 'لوحة إدارة بسيطة',
+    's2.i3': 'سلة طلبات',
+    's3.title': 'تطبيقات وأدوات مهنية',
+    's3.desc': 'أدوات تتلاءم مع طريقة عملك: التصرّف، والفوترة، والمساعدات الذكية.',
+    's3.i1': 'ويب أو حاسوب أو أندرويد',
+    's3.i2': 'بيانات في الوقت الفعلي',
+    's3.i3': 'حسب الطلب بالكامل',
+    's4.title': 'الإطلاق والمتابعة',
+    's4.desc': 'أتكفّل بكل شيء: الاستضافة واسم النطاق — وأبقى متاحاً بعد التسليم.',
+    's4.i1': 'النشر (Vercel)',
+    's4.i2': 'اسم النطاق',
+    's4.i3': 'دعم بعد التسليم',
+    'sec.method.kicker': 'المنهجية',
+    'sec.method.title': 'واضح وفعّال <em>ودون تعقيد</em>.',
+    'm1.title': 'الحوار',
+    'm1.desc': 'نتحدث عن نشاطك وعملائك وما يجب أن يحققه الموقع.',
+    'm2.title': 'العرض',
+    'm2.desc': 'تستلم نموذجاً أولياً وعرض سعر واضحاً، مع نطاق عمل وآجال محددة.',
+    'm3.title': 'التطوير',
+    'm3.desc': 'أبني الموقع وتتابع تقدّمه — وتُدمج ملاحظاتك أولاً بأول.',
+    'm4.title': 'الإطلاق',
+    'm4.desc': 'النشر على الإنترنت والتحقق النهائي — وأبقى متاحاً لما بعد ذلك.',
+    'sec.about.kicker': 'من أنا',
+    'sec.about.title': 'وراء كل مشروع، <em>عناية بأدق التفاصيل</em>.',
+    'about.role': 'مطوّر ويب — تونس',
+    'about.p1': 'بصفتي مطوّر ويب مستقلاً، أصمّم مواقع عصرية وحسب الطلب للمقاهي والمطاعم والشركات التي ترغب في تطوير حضورها على الإنترنت والتميّز.',
+    'about.p2': 'منهجيتي: فهم عالمك وهويتك واحتياجاتك لتحويلها إلى تجربة ويب فريدة. من هويتك البصرية إلى خدماتك، كل عنصر مدروس ليعكس نشاطك ويشجّع عملاءك المستقبليين على اكتشافك.',
+    'about.p3': 'لا قوالب جاهزة. لا حلول عامة. كل موقع يُصمَّم بعناية، من الفكرة الأولى حتى آخر تفصيل.',
+    'about.stack.label': 'الأدوات والتقنيات',
+    'about.langs.label': 'اللغات',
+    'about.lang1': 'العربية',
+    'about.lang2': 'الفرنسية',
+    'about.lang3': 'الإنجليزية',
+    'tl1.title': 'عمل مستقل — مواقع وطلب عبر الإنترنت لقطاع المطاعم',
+    'tl1.desc': 'BISOU (متاح الآن)، Le Porche، Mornaco، Tarkan: مواقع تعريفية، وقوائم كاملة، وطلب من الطاولة لمحلات تونسية.',
+    'tl2.title': 'أدوات مهنية وذكاء اصطناعي',
+    'tl2.desc': 'PS5 Manager (مقهى ألعاب، حاسوب + هاتف) و Douane Manager، برنامج تصرّف ديواني يساعده 10 وكلاء ذكاء اصطناعي.',
+    'sec.contact.kicker': 'تواصل',
+    'contact.title': 'لديك مشروع؟ <em>لنتحدث.</em>',
+    'contact.sub': 'حدّثني عن نشاطك في بضعة أسطر — أردّ خلال 24 ساعة بأولى الأفكار.',
+    'contact.copy': 'نسخ البريد',
+    'contact.time': 'التوقيت المحلي',
+    'contact.avail': 'متاح لمشاريع جديدة',
+    'contact.city': 'تونس العاصمة، تونس',
+    'footer.credit': 'صُمّم وطُوّر يدوياً',
+    'footer.top': 'العودة إلى الأعلى',
+    'case.context': 'السياق',
+    'case.work': 'ما أنجزته',
+    'case.stack': 'التقنيات',
+    'd.bisou.ctx': 'أراد مقهى BISOU أكثر من مجرد موقع تعريفي: تمكين زبائنه من الطلب من طاولتهم ومتابعة طلبهم مباشرة.',
+    'd.bisou.w1': 'قائمة حسب الفئات مع سلة عائمة وإتمام للطلب، وتأكيد الطلب بمسح رمز QR على الطاولة.',
+    'd.bisou.w2': 'تتبّع الطلب في الوقت الفعلي (قيد الانتظار ← قيد التحضير ← جاهز ← تم التقديم) ولوحة إدارة للفريق.',
+    'd.bisou.w3': 'في الإنتاج على Vercel مع Supabase — كل تحديث يُنشر تلقائياً.',
+    'd.mornaco.ctx': 'كانت لـ MORNACO هوية بصرية قوية على قائمتها المطبوعة — فيروزي وكريمي وبنفسجي نيون — لكن دون أي حضور على الإنترنت.',
+    'd.mornaco.w1': 'موقع من صفحة واحدة ينقل بأمانة هوية القائمة المطبوعة، حتى اللافتة المضيئة أُعيد إنشاؤها بـ CSS.',
+    'd.mornaco.w2': 'قائمة كاملة — 11 فئة ونحو 200 صنف — مع تبويبات، وكل الأسعار قابلة للتعديل من ملف واحد.',
+    'd.mornaco.w3': 'دمج الصور الحقيقية للمحل، مع تحسين للهاتف وللأداء.',
+    'd.tarkan.ctx': 'أول مطعم للأطباق التركية في الضاحية الجنوبية لتونس، يحظى بتقييمات ممتازة — لكن دون أي موقع ويب.',
+    'd.tarkan.w1': 'موقع من أربع صفحات: الرئيسية، وقائمة بتبويبات، ومعرض صور، وصفحة تواصل مع الحجز عبر واتساب.',
+    'd.tarkan.w2': 'ألوان الطين المحروق والذهبي مستوحاة من الطهي على الفحم، مع زخرفة عثمانية مرسومة خصيصاً.',
+    'd.tarkan.w3': 'حركات عند التمرير تحترم تفضيلات تقليل الحركة.',
+    'd.porche.ctx': 'احتاج Le Porche، محل الحلويات الفاخرة والمقهى في النصر (أريانة)، إلى حضور على الإنترنت يليق بمكانته الراقية.',
+    'd.porche.w1': 'هوية صارمة بالكريمي والأسود والذهبي، وخطوط أنيقة — الفخامة في البساطة.',
+    'd.porche.w2': 'قائمة من 49 إبداعاً في 8 فئات، منها مجموعة Cubissimo المميزة وخيارات القهوة المختصة.',
+    'd.porche.w3': 'طلب كامل عبر الإنترنت (سلة، إتمام الطلب، تتبّع) يعتمد على نظام BISOU المجرَّب.',
+    'd.ps5.ctx': 'احتاج مقهى ألعاب إلى إدارة أجهزة PS5 وطاولات البلياردو — جلسات FIFA/EA FC، ومدة اللعب، والفوترة — دون وجود برنامج مناسب في السوق.',
+    'd.ps5.w1': 'توقيت فوري لكل جهاز، وفوترة حسب الشرائح بأسعار قابلة للتعديل، وبلياردو بالتناسب، وسجل وتصدير CSV.',
+    'd.ps5.w2': 'رصد آلي لمباريات FIFA/EA FC عبر واجهة PSN، وإيصالات قابلة للطباعة (حرارية 80 مم)، وبيانات محلية 100% (SQLite).',
+    'd.ps5.w3': 'تطبيق لحاسوب Windows (Electron) + نفاذ عبر الهاتف على شبكة WiFi المقهى: تطبيق PWA قابل للتثبيت وملف APK لأندرويد.',
+    'd.douane.ctx': 'كان مكتب وكيل ديواني يدير الملفات والتصاريح والفوترة يدوياً — عملية بطيئة وعرضة للأخطاء.',
+    'd.douane.w1': 'برنامج متكامل: مسار ملف من 11 مرحلة، وإدارة الحرفاء، وفوترة مع الأداء على القيمة المضافة والتعريفة، وأرشفة قانونية.',
+    'd.douane.w2': '10 وكلاء ذكاء اصطناعي متخصصين (استخراج الوثائق، التصنيف التعريفي، احتساب المعاليم، إعداد التصاريح…) — الذكاء الاصطناعي يقترح، والوكيل المعتمد يصادق دائماً.',
+    'd.douane.w3': 'واجهة بالفرنسية بالكامل، ووضع تجريبي كامل دون مفتاح API، ونسخ احتياطي واسترجاع كامل للبيانات.',
+    'd.caisse.ctx': 'كانت شركة تسلّم أموالاً نقدية لأعوانها الميدانيين دون وسيلة موثوقة لمتابعة المبالغ المبرَّرة بالفواتير.',
+    'd.caisse.w1': 'متابعة لكل عون للأموال المسلّمة والفواتير المبرِّرة، مع فئات للمصاريف وحالة مرئية فورية.',
+    'd.caisse.w2': 'ميزانية صندوق لكل شركة مع خصم آلي وتنبيه عند التجاوز، وسجل وحصيلة.',
+    'd.caisse.w3': 'نفاذ محمي برمز PIN، وتذكيرات آلية بالرسائل القصيرة للأعوان، وتطبيق قابل للتثبيت (PWA).',
+    'd.ejrijarri.ctx': 'احتاجت لعبة بطاقات حول كرة القدم التونسية إلى متجر على الإنترنت للبيع في كامل البلاد.',
+    'd.ejrijarri.w1': 'واجهة ومتجر: تقديم اللعبة في لمحة (330 بطاقة، 12 فئة، 7 بطاقات خاصة) مع القواعد في الواجهة.',
+    'd.ejrijarri.w2': 'طلب عبر الإنترنت مع الدفع عند الاستلام، وشحن إلى كامل أنحاء تونس.',
+    'd.ejrijarri.w3': 'تصميم احتفالي بألوان كرة القدم، مصمّم ليُقنع في ثوانٍ على الهاتف.',
+    'd.misterm.ctx': 'أرادت Mister M، قاعة الشاي والمطعم في مرناق، قائمة كاملة على الإنترنت وطلباً سلساً من الطاولة.',
+    'd.misterm.w1': 'قائمة كاملة في 9 فئات — قهوة، مثلجات، موهيتو، حلويات، كريب، مطعم وشيشة — مع سلة وطلب عبر الإنترنت.',
+    'd.misterm.w2': 'تتبّع الطلب في الوقت الفعلي (مُستلَم ← قيد التحضير ← جاهز ← تم التقديم) وفضاء مخصص للفريق.',
+    'd.misterm.w3': 'هوية بالأسود والذهبي والكريمي، مصمّمة لقاعة دافئة مع ركن عائلي وشاشة كبيرة.'
+  };
+
   var META = {
     fr: {
       title: 'Melek Maazaoui — Développeur web freelance à Tunis',
       desc: 'Sites vitrines, menus digitaux QR et outils métier pour cafés, restaurants et commerces. Développeur web freelance basé à Tunis — projets sur-mesure, sans template.',
-      langBtn: 'EN',
-      langBtnLabel: 'Switch to English',
+      langGroup: 'Langue',
       menuLabel: 'Ouvrir le menu',
       closeLabel: 'Fermer',
       themeToDark: 'Passer en mode sombre',
@@ -178,13 +330,22 @@
     en: {
       title: 'Melek Maazaoui — Freelance web developer in Tunis',
       desc: 'Showcase websites, QR digital menus and business tools for cafés, restaurants and local businesses. Freelance web developer based in Tunis — custom work, no templates.',
-      langBtn: 'FR',
-      langBtnLabel: 'Passer en français',
+      langGroup: 'Language',
       menuLabel: 'Open menu',
       closeLabel: 'Close',
       themeToDark: 'Switch to dark mode',
       themeToLight: 'Switch to light mode',
       copied: 'Copied!'
+    },
+    ar: {
+      title: 'Melek Maazaoui — مطوّر مواقع ويب مستقل في تونس',
+      desc: 'مواقع تعريفية، وقوائم رقمية QR، وأدوات مهنية للمقاهي والمطاعم والمحلات. مطوّر مواقع ويب مستقل مقيم في تونس — مشاريع حسب الطلب، بلا قوالب جاهزة.',
+      langGroup: 'اللغة',
+      menuLabel: 'فتح القائمة',
+      closeLabel: 'إغلاق',
+      themeToDark: 'التبديل إلى الوضع الداكن',
+      themeToLight: 'التبديل إلى الوضع الفاتح',
+      copied: 'تم النسخ!'
     }
   };
 
@@ -195,22 +356,32 @@
     if (!(k in FR)) FR[k] = el.innerHTML;
   });
 
+  var DICTS = { fr: FR, en: EN, ar: AR };
   var currentLang = 'fr';
-  var langBtn = document.getElementById('lang-toggle');
+  var langSwitch = document.getElementById('lang-switch');
+  var langBtns = langSwitch ? langSwitch.querySelectorAll('[data-lang]') : [];
   var menuBtn = document.getElementById('menu-toggle');
   var metaDesc = document.querySelector('meta[name="description"]');
 
+  function updateLangButtons(lang) {
+    langBtns.forEach(function (btn) {
+      btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === lang ? 'true' : 'false');
+    });
+    if (langSwitch) langSwitch.setAttribute('aria-label', META[lang].langGroup);
+  }
+
   function setLang(lang) {
-    var dict = lang === 'en' ? EN : FR;
+    if (!DICTS[lang]) lang = 'fr';
+    var dict = DICTS[lang];
     i18nNodes.forEach(function (el) {
       var v = dict[el.getAttribute('data-i18n')];
       if (v != null) el.innerHTML = v;
     });
     document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.title = META[lang].title;
     if (metaDesc) metaDesc.setAttribute('content', META[lang].desc);
-    langBtn.textContent = META[lang].langBtn;
-    langBtn.setAttribute('aria-label', META[lang].langBtnLabel);
+    updateLangButtons(lang);
     menuBtn.setAttribute('aria-label', META[lang].menuLabel);
     document.querySelectorAll('.case-close').forEach(function (btn) {
       btn.setAttribute('aria-label', META[lang].closeLabel);
@@ -262,11 +433,19 @@
 
   var storedLang = null;
   try { storedLang = localStorage.getItem('lang'); } catch (e) { /* stockage indisponible */ }
-  var initialLang = storedLang || ((navigator.language || 'fr').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en');
-  if (initialLang === 'en') setLang('en');
+  var navLang = (navigator.language || 'fr').toLowerCase();
+  var initialLang = DICTS[storedLang] ? storedLang
+    : navLang.indexOf('fr') === 0 ? 'fr'
+    : navLang.indexOf('ar') === 0 ? 'ar'
+    : 'en';
+  if (initialLang !== 'fr') setLang(initialLang);
+  else updateLangButtons('fr');
 
-  langBtn.addEventListener('click', function () {
-    setLang(currentLang === 'fr' ? 'en' : 'fr');
+  langBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = btn.getAttribute('data-lang');
+      if (lang !== currentLang) setLang(lang);
+    });
   });
 
   /* ============ Header on scroll ============ */
@@ -411,7 +590,7 @@
       icCheck.hidden = false;
       clearTimeout(copyTimer);
       copyTimer = setTimeout(function () {
-        copyLabel.innerHTML = (currentLang === 'en' ? EN : FR)['contact.copy'];
+        copyLabel.innerHTML = DICTS[currentLang]['contact.copy'];
         icCopy.hidden = false;
         icCheck.hidden = true;
       }, 2000);
@@ -443,7 +622,7 @@
   function updateClock() {
     if (!timeEl) return;
     try {
-      timeEl.textContent = new Intl.DateTimeFormat(currentLang === 'fr' ? 'fr-FR' : 'en-GB', {
+      timeEl.textContent = new Intl.DateTimeFormat({ fr: 'fr-FR', en: 'en-GB', ar: 'ar-TN' }[currentLang], {
         timeZone: 'Africa/Tunis',
         hour: '2-digit',
         minute: '2-digit'

@@ -1,6 +1,7 @@
 # Portfolio — Melek Maazaoui
 
-Site portfolio statique (HTML/CSS/JS, sans build) : éditorial, bilingue **FR/EN**,
+Site portfolio statique (HTML/CSS/JS, sans build) : éditorial, trilingue **FR / EN / AR**
+(l'arabe s'affiche de droite à gauche),
 avec **mode clair et mode sombre** (palette « Méditerranée » bleu roi + bleu clair).
 Les 6 projets présentés sont vos vrais projets (BISOU, Mornaco, Tarkan, Le Porche,
 PS5 Manager, Douane Manager), chaque carte reprend les couleurs de la marque du client.
@@ -20,13 +21,14 @@ npx http-server . -p 5510        # puis http://localhost:5510
 | Fichier | Rôle |
 |---|---|
 | `index.html` | Tout le contenu **en français** (source de vérité) |
-| `script.js` | Traductions **anglaises** (objet `EN` en haut du fichier) + interactions |
+| `script.js` | Traductions **anglaises** (objet `EN`) et **arabes** (objet `AR`) + interactions |
 | `styles.css` | Design complet (couleurs dans `:root` en haut du fichier) |
 
 ## Personnaliser
 
 - **Textes FR** → modifier directement dans `index.html`.
-- **Textes EN** → modifier l'objet `EN` au début de `script.js` (mêmes clés `data-i18n`).
+- **Textes EN / AR** → modifier les objets `EN` et `AR` au début de `script.js` (mêmes clés `data-i18n`).
+  Toute nouvelle clé doit être ajoutée dans les deux objets.
 - **Couleurs** → en haut de `styles.css` : le bloc `:root` contient le mode clair,
   `:root[data-theme="dark"]` le mode sombre.
   `--accent` = bleu roi (boutons, liens), `--sky` / `--sky-text` = bleu clair (accents).
@@ -36,7 +38,7 @@ npx http-server . -p 5510        # puis http://localhost:5510
 - **Photo** : le bloc « MM » de la section À propos (`.about-card`) est prévu pour être
   remplacé par une vraie photo de vous — recommandé pour la confiance client.
 - **Ajouter un projet** : dupliquer un bloc `<article class="project">` + son
-  `<dialog class="case">`, puis ajouter les clés EN correspondantes dans `script.js`.
+  `<dialog class="case">`, puis ajouter les clés EN et AR correspondantes dans `script.js`.
 
 ## À compléter quand vous les aurez
 
