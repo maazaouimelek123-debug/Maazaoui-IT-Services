@@ -429,6 +429,20 @@ h1 em, h2 em {
   color: var(--muted);
 }
 
+.hero-lede-2 { margin-top: 1rem; }
+
+/* Lien LinkedIn sur le nom dans l'introduction */
+.lede-link {
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--sky);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+.lede-link:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
 .hero-ctas {
   display: flex;
   flex-wrap: wrap;
