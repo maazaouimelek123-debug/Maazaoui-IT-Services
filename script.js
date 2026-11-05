@@ -23,7 +23,7 @@
     'nav.contact': 'Contact',
     'nav.cta': "Let's talk",
     'hero.badge': 'Available for new projects',
-    'hero.title': 'Websites that make <em>customers walk in</em>.',
+    'hero.title': 'Websites that turn <em>visitors into customers</em>.',
     'hero.lede': "I'm Melek Maazaoui, a freelance web developer based in Tunis. I design showcase websites, online ordering and business tools that give cafés, restaurants and local businesses the image they deserve.",
     'hero.cta1': 'See my work',
     'hero.cta2': 'Get in touch',
