@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- MITS — monogramme « Toit avec découpe » : M sombre, T et I bleus -->
+  <path d="M22 84V31l28 30 28-30v53" stroke="#0E1B2A" stroke-width="9"/>
+  <path d="M50 40v42" stroke="#F6F8FC" stroke-width="17"/>
+  <path d="M50 22v62" stroke="#1C8AD9" stroke-width="9"/>
+  <path d="M14 22h72" stroke="#1C8AD9" stroke-width="9"/>
+</svg>

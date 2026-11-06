@@ -225,15 +225,32 @@ button { font: inherit; color: inherit; }
 }
 
 .brand {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
   white-space: nowrap;
 }
-.brand span { color: var(--accent); }
-.brand-cell { color: var(--accent); }
+/* Monogramme MITS « Toit avec découpe » : M sombre, T et I bleus */
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.brand-mark .bm-m { stroke: var(--text); stroke-width: 9; }
+.brand-mark .bm-cut { stroke: var(--bg); stroke-width: 17; }
+.brand-mark .bm-blue { stroke: var(--sky-text); stroke-width: 9; }
+.brand:hover .brand-mark { transform: translateY(-2px); }
+.brand-text { display: inline-block; }
+.brand-cell { color: var(--text); }
+.brand-cell.brand-blue { color: var(--sky-text); }
 .brand-expand {
   display: inline-block;
   max-width: 0;
@@ -1221,6 +1238,7 @@ html.js .reveal.in {
 }
 
 @media (max-width: 370px) {
+  .brand-text { display: none; } /* très petits écrans : symbole seul */
   .nav-actions { gap: 0.45rem; }
   .lang-switch button { min-width: 30px; padding: 0 0.45rem; }
 }

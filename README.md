@@ -59,3 +59,17 @@ npx vercel --prod
 
 Pas de framework à configurer : c'est un site statique (aucun build).
 Fonctionne aussi sur Netlify, GitHub Pages, Cloudflare Pages.
+
+## Logo
+
+Monogramme MITS « Toit avec découpe » : M sombre, T et I bleus (le I traverse le M).
+
+| Fichier | Usage |
+|---|---|
+| `favicon.svg` | Icône d'onglet (fond bleu roi) |
+| `apple-touch-icon.png` | Icône d'écran d'accueil iPhone (180 × 180) |
+| `og-image.png` | Image d'aperçu sur WhatsApp, Facebook, LinkedIn (1200 × 630) |
+| `assets/logo-mark.svg` | Monogramme seul, pour documents et signatures |
+
+Dans la barre de navigation, le logo est dessiné en SVG directement dans `index.html`
+et ses couleurs suivent le thème clair/sombre (classes `.brand-mark` dans `styles.css`).
