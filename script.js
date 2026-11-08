@@ -95,11 +95,7 @@
     'tl2.desc': 'Caisse Tracker (cash tracking per field agent) and SINDA Agent, automated data entry into the SINDA2000 customs application.',
     'sec.contact.kicker': 'Contact',
     'contact.title': 'Have a project in mind? <em>Let’s talk.</em>',
-    'contact.sub': 'A tool to automate or a website to build: tell me about your business in a few lines — I reply within 24 hours.',
-    'contact.copy': 'Copy email',
-    'contact.time': 'Local time',
-    'contact.avail': 'Available for new projects',
-    'contact.city': 'Tunis, Tunisia',
+    'contact.sub': 'Describe what you need in a few lines: I’ll reply within 24 hours with first ideas.',
     'footer.credit': 'designed &amp; built by hand',
     'footer.top': 'Back to top',
     'case.context': 'Context',
@@ -140,7 +136,19 @@
     'sec.soft.sub': 'Built with the teams who use them, around the way they actually work — with the final validation always in the professional’s hands.',
     'soft.tag': 'Software',
     'sec.sites.kicker': 'Websites · 5 live',
-    'proj.visit': 'Visit'
+    'proj.visit': 'Visit',
+    'contact.p1': 'Reply within 24 hours',
+    'contact.p2': 'Your information stays private',
+    'contact.direct': 'Or write directly to',
+    'form.name': 'Name',
+    'form.email': 'Email',
+    'form.phone': 'Phone / WhatsApp',
+    'form.phoneHint': '· for a faster reply',
+    'form.message': 'Describe what you need',
+    'form.submit': 'Send my request',
+    'form.ph.name': 'Your name',
+    'form.ph.email': 'you@example.com',
+    'form.ph.message': 'E.g. we enter our invoices by hand and want to track each agent’s expenses…'
   };
 
   /* Version arabe (العربية) — affichée de droite à gauche (dir="rtl").
@@ -226,11 +234,7 @@
     'tl2.desc': 'Caisse Tracker (متابعة الصندوق لكل عون ميداني) وSINDA Agent، إدخال آلي للبيانات في تطبيق SINDA2000 الديواني.',
     'sec.contact.kicker': 'تواصل',
     'contact.title': 'لديك مشروع؟ <em>لنتحدث.</em>',
-    'contact.sub': 'أداة تريد أتمتتها أو موقع تريد إنشاءه: حدّثني عن نشاطك في بضعة أسطر — أردّ خلال 24 ساعة.',
-    'contact.copy': 'نسخ البريد',
-    'contact.time': 'التوقيت المحلي',
-    'contact.avail': 'متاح لمشاريع جديدة',
-    'contact.city': 'تونس العاصمة، تونس',
+    'contact.sub': 'صِف حاجتك في بضعة أسطر: أردّ عليك خلال 24 ساعة بأولى الأفكار.',
     'footer.credit': 'صُمّم وطُوّر يدوياً',
     'footer.top': 'العودة إلى الأعلى',
     'case.context': 'السياق',
@@ -271,7 +275,19 @@
     'sec.soft.sub': 'مصمَّمة مع الفرق التي تستعملها، وفق طريقة عملها الفعلية — مع إبقاء المصادقة النهائية دائماً بيد المهني.',
     'soft.tag': 'برمجية',
     'sec.sites.kicker': 'مواقع الويب · 5 منشورة',
-    'proj.visit': 'زيارة'
+    'proj.visit': 'زيارة',
+    'contact.p1': 'ردّ خلال 24 ساعة',
+    'contact.p2': 'معلوماتك تبقى سرّية',
+    'contact.direct': 'أو راسلني مباشرة على',
+    'form.name': 'الاسم',
+    'form.email': 'البريد الإلكتروني',
+    'form.phone': 'الهاتف / واتساب',
+    'form.phoneHint': '· لردّ أسرع',
+    'form.message': 'صِف حاجتك',
+    'form.submit': 'إرسال طلبي',
+    'form.ph.name': 'اسمك',
+    'form.ph.email': 'you@example.com',
+    'form.ph.message': 'مثال: نُدخل فواتيرنا يدوياً ونريد متابعة مصاريف كل عون…'
   };
 
   var META = {
@@ -283,7 +299,14 @@
       closeLabel: 'Fermer',
       themeToDark: 'Passer en mode sombre',
       themeToLight: 'Passer en mode clair',
-      copied: 'Copié !'
+      copied: 'Copié !',
+      formSending: 'Envoi en cours…',
+      formOk: 'Merci ! Votre demande est bien envoyée. Je vous réponds sous 24 h.',
+      formRequired: 'Merci d’indiquer votre nom, votre email et votre besoin.',
+      formEmail: 'Cette adresse email ne semble pas valide.',
+      formShort: 'Décrivez votre besoin en quelques mots de plus.',
+      formRate: 'Trop de demandes envoyées. Réessayez dans quelques minutes.',
+      formErr: 'L’envoi n’a pas fonctionné. Écrivez-moi directement à melekmaazaoui41@gmail.com.'
     },
     en: {
       title: 'Melek Maazaoui — Custom business software & websites in Tunis',
@@ -293,7 +316,14 @@
       closeLabel: 'Close',
       themeToDark: 'Switch to dark mode',
       themeToLight: 'Switch to light mode',
-      copied: 'Copied!'
+      copied: 'Copied!',
+      formSending: 'Sending…',
+      formOk: 'Thank you! Your request has been sent. I’ll reply within 24 hours.',
+      formRequired: 'Please enter your name, your email and what you need.',
+      formEmail: 'This email address doesn’t look valid.',
+      formShort: 'Please describe what you need in a few more words.',
+      formRate: 'Too many requests sent. Please try again in a few minutes.',
+      formErr: 'Sending failed. Please write to me directly at melekmaazaoui41@gmail.com.'
     },
     ar: {
       title: 'Melek Maazaoui — برمجيات مهنية ومواقع ويب حسب الطلب في تونس',
@@ -303,7 +333,14 @@
       closeLabel: 'إغلاق',
       themeToDark: 'التبديل إلى الوضع الداكن',
       themeToLight: 'التبديل إلى الوضع الفاتح',
-      copied: 'تم النسخ!'
+      copied: 'تم النسخ!',
+      formSending: 'جارٍ الإرسال…',
+      formOk: 'شكراً! تم إرسال طلبك. سأردّ عليك خلال 24 ساعة.',
+      formRequired: 'يُرجى إدخال اسمك وبريدك الإلكتروني وحاجتك.',
+      formEmail: 'يبدو أن عنوان البريد الإلكتروني غير صالح.',
+      formShort: 'يُرجى وصف حاجتك ببضع كلمات إضافية.',
+      formRate: 'تم إرسال طلبات كثيرة. أعِد المحاولة بعد بضع دقائق.',
+      formErr: 'تعذّر الإرسال. راسلني مباشرة على melekmaazaoui41@gmail.com.'
     }
   };
 
@@ -312,6 +349,12 @@
   i18nNodes.forEach(function (el) {
     var k = el.getAttribute('data-i18n');
     if (!(k in FR)) FR[k] = el.innerHTML;
+  });
+
+  var phNodes = document.querySelectorAll('[data-i18n-ph]');
+  phNodes.forEach(function (el) {
+    var k = el.getAttribute('data-i18n-ph');
+    if (!(k in FR)) FR[k] = el.getAttribute('placeholder');
   });
 
   var DICTS = { fr: FR, en: EN, ar: AR };
@@ -335,6 +378,12 @@
       var v = dict[el.getAttribute('data-i18n')];
       if (v != null) el.innerHTML = v;
     });
+    phNodes.forEach(function (el) {
+      var v = dict[el.getAttribute('data-i18n-ph')];
+      if (v != null) el.setAttribute('placeholder', v);
+    });
+    var langField = document.querySelector('#contact-form input[name="lang"]');
+    if (langField) langField.value = lang;
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
     document.title = META[lang].title;
@@ -591,6 +640,76 @@
   }
   updateClock();
   setInterval(updateClock, 30000);
+
+  /* ============ Formulaire de contact ============
+     Envoyé en JSON par POST à /api/contact (fonction Vercel qui transmet par e-mail).
+     Sans JavaScript, le formulaire s'envoie quand même nativement. */
+  var form = document.getElementById('contact-form');
+  if (form && window.fetch) {
+    var statusEl = document.getElementById('form-status');
+    var submitBtn = form.querySelector('.form-submit');
+    var EMAIL_OK = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[A-Za-z]{2,}$/;
+
+    function showStatus(kind, key) {
+      statusEl.textContent = (META[currentLang] || META.fr)[key];
+      statusEl.className = 'form-status' + (kind ? ' is-' + kind : '');
+    }
+    function markInvalid(field, bad) {
+      if (bad) field.setAttribute('aria-invalid', 'true');
+      else field.removeAttribute('aria-invalid');
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = form.elements;
+      var name = f.name.value.trim();
+      var email = f.email.value.trim();
+      var message = f.message.value.trim();
+      markInvalid(f.name, !name);
+      markInvalid(f.email, !email || !EMAIL_OK.test(email));
+      markInvalid(f.message, message.length < 10);
+      if (!name || !email || !message) { showStatus('err', 'formRequired'); return; }
+      if (!EMAIL_OK.test(email)) { showStatus('err', 'formEmail'); f.email.focus(); return; }
+      if (message.length < 10) { showStatus('err', 'formShort'); f.message.focus(); return; }
+
+      var payload = {
+        name: name,
+        email: email,
+        phone: f.phone.value.trim(),
+        message: message,
+        lang: currentLang,
+        website: f.website.value
+      };
+      submitBtn.disabled = true;
+      showStatus('', 'formSending');
+      fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          if (res.ok && data.ok) {
+            form.reset();
+            showStatus('ok', 'formOk');
+          } else if (res.status === 429) {
+            showStatus('err', 'formRate');
+          } else if (data.error === 'invalid_email') {
+            showStatus('err', 'formEmail');
+          } else if (data.error === 'too_short_message') {
+            showStatus('err', 'formShort');
+          } else if (data.error && data.error.indexOf('missing_') === 0) {
+            showStatus('err', 'formRequired');
+          } else {
+            showStatus('err', 'formErr');
+          }
+        });
+      }).catch(function () {
+        showStatus('err', 'formErr');
+      }).then(function () {
+        submitBtn.disabled = false;
+      });
+    });
+  }
 
   /* ============ Année ============ */
   var yearEl = document.getElementById('year');

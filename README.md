@@ -54,6 +54,24 @@ npx http-server . -p 5510        # puis http://localhost:5510
   (section À propos) — seuls les éléments vérifiables ont été inclus.
 - **Image Open Graph** (`og:image`) pour un bel aperçu lors des partages.
 
+## Formulaire de contact (envoi par e-mail)
+
+La section Contact contient un formulaire (nom, email, téléphone/WhatsApp, besoin).
+Il est envoyé à `api/contact.js`, une fonction Vercel qui le transmet par e-mail via **Resend**.
+Validation côté serveur, champ anti-robots caché, limite de 5 envois / 10 min par visiteur.
+
+À configurer une fois dans **Vercel › Project › Settings › Environment Variables** (Production),
+puis redéployer :
+
+| Variable | Valeur |
+|---|---|
+| `RESEND_API_KEY` | clé API créée sur resend.com (API Keys › Create) |
+| `CONTACT_TO_EMAIL` | l'adresse qui reçoit les demandes — **celle du compte Resend** tant qu'aucun domaine n'est vérifié |
+| `CONTACT_FROM_EMAIL` | facultatif — par défaut `MITS <onboarding@resend.dev>` ; avec un domaine vérifié : `MITS <contact@votre-domaine>` |
+
+Sans ces variables, le formulaire affiche un message d'erreur qui invite à écrire directement par e-mail.
+Pour répondre à un client : répondez simplement à l'e-mail reçu (le « Répondre à » est l'adresse du client).
+
 ## Déployer (Vercel — comme vos autres projets)
 
 ```bash
