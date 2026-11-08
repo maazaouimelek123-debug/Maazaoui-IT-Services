@@ -3,10 +3,11 @@
 Site portfolio statique (HTML/CSS/JS, sans build) : éditorial, trilingue **FR / EN / AR**
 (l'arabe s'affiche de droite à gauche),
 avec **mode clair et mode sombre** (palette « Méditerranée » bleu roi + bleu clair).
-Les 7 projets présentés sont ceux hébergés sur Vercel, plus SINDA Agent :
-Garrara International Trading, Eight’In Flour & Coffee, Mister M Coffee, Ejry & Jarry,
-Mornaco (tous en ligne, avec lien vers le site), Caisse Tracker et SINDA Agent (en cours).
-Chaque carte reprend les couleurs de la marque du client.
+Mise en page « bento » (tuiles), mode clair par défaut.
+La section **Logiciels métier** (SINDA Agent, Caisse Tracker) est mise en avant en premier,
+suivie des **Sites web** en ligne (Garrara, Eight’In, Mister M Coffee, Ejry & Jarry, Mornaco),
+chacun avec un lien « Visiter » et une fiche « Détails ».
+Le logo Garrara est dans `assets/clients/`.
 
 ## Lancer en local
 
