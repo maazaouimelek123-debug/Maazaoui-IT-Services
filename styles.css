@@ -658,18 +658,6 @@ h1 em, h2 em {
   letter-spacing: 0.22em;
 }
 
-/* BISOU — rouge profond, crème, or */
-.cover--bisou { background: linear-gradient(155deg, #8B1A1A, #6B1313); }
-.cover--bisou .cover-word { color: #FDF8F2; letter-spacing: 0.12em; }
-.cover--bisou .cover-sub { color: rgba(253, 248, 242, 0.72); }
-.bisou-rule {
-  position: relative;
-  z-index: 1;
-  width: 90px;
-  height: 1.5px;
-  background: #C9956A;
-}
-
 /* Mornaco — turquoise, crème, néon violet */
 .cover--mornaco { background: #3CB9A0; }
 .cover--mornaco .cover-word { color: #1C3049; }
@@ -694,68 +682,48 @@ h1 em, h2 em {
   box-shadow: 0 0 14px 2px rgba(178, 107, 242, 0.85);
 }
 
-/* Tarkan — terracotta, or, crème */
-.cover--tarkan { background: linear-gradient(150deg, #B03A2E, #93291F); }
-.cover--tarkan .cover-word { color: #FBF2E4; }
-.cover--tarkan .cover-sub { color: rgba(251, 242, 228, 0.72); }
-.star8 {
+/* Garrara — sarcelle sur nuit océane, trois divisions (énergie, agro, engrais) */
+.cover--garrara { background: linear-gradient(160deg, #17303C, #0D1A21); }
+.cover--garrara .cover-word { color: #E8EEF0; letter-spacing: 0.16em; }
+.cover--garrara .cover-sub { color: rgba(232, 238, 240, 0.65); }
+.teal-rule { position: relative; z-index: 1; width: 84px; height: 2px; border-radius: 999px; background: #34C9B4; }
+.route-motif {
   position: absolute;
-  width: 190px;
-  height: 190px;
-  opacity: 0.5;
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.project:hover .star8 { transform: rotate(22.5deg) scale(1.05); }
-
-/* Le Porche — crème, noir, or */
-.cover--porche { background: #F7F2EA; }
-.cover--porche .cover-word { color: #1C1A17; }
-.cover--porche .cover-sub { color: rgba(28, 26, 23, 0.6); }
-.gold-rule {
-  position: relative;
-  z-index: 1;
-  width: 90px;
-  height: 1.5px;
-  background: #C8A87A;
-}
-.qr-motif {
-  position: absolute;
-  top: 1.15rem;
-  right: 1.15rem;
-  width: 52px;
-  height: 52px;
-  opacity: 0.85;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 120px;
+  opacity: 0.9;
   transition: transform 0.4s ease;
 }
-.project:hover .qr-motif { transform: scale(1.08); }
+.project:hover .route-motif { transform: translateX(-4px); }
 
-/* PS5 Manager — bleu PlayStation sur nuit */
-.cover--ps5 { background: linear-gradient(160deg, #0A1120, #0E1B33); }
-.cover--ps5 .cover-word { color: #EAF2FF; letter-spacing: 0.08em; }
-.cover--ps5 .cover-sub { color: rgba(234, 242, 255, 0.65); }
-.glow {
+/* Eight’In — bleu marine, bleu ciel, coups de pinceau */
+.cover--eightin { background: linear-gradient(160deg, #1B3A57, #12293F); }
+.cover--eightin .cover-word { color: #FFFFFF; letter-spacing: 0.12em; }
+.cover--eightin .cover-sub { color: rgba(201, 233, 245, 0.85); }
+.sky-rule { position: relative; z-index: 1; width: 80px; height: 1.5px; background: #8CCBE3; }
+.brush-motif {
   position: absolute;
-  width: 65%;
-  height: 65%;
-  top: -20%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(46, 139, 255, 0.35), transparent 70%);
-  filter: blur(30px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.16;
+  transition: transform 0.6s ease;
 }
-.ps-shapes { position: relative; z-index: 1; width: 150px; opacity: 0.9; }
+.project:hover .brush-motif { transform: translateX(6px); }
 
-/* Douane Manager — nuit administrative, bleu acier, 10 agents */
-.cover--douane { background: linear-gradient(160deg, #1E2A3A, #131B27); }
-.cover--douane .cover-word { color: #E8EDF4; letter-spacing: 0.06em; font-size: clamp(1.35rem, 2.6vw, 2rem); }
-.cover--douane .cover-sub { color: rgba(232, 237, 244, 0.65); }
-.agents-motif {
+/* SINDA Agent — ardoise, vert tableur : Excel → formulaire */
+.cover--sinda { background: linear-gradient(160deg, #1F2A2E, #131B1E); }
+.cover--sinda .cover-word { color: #E6EEEA; letter-spacing: 0.08em; font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
+.cover--sinda .cover-sub { color: rgba(230, 238, 234, 0.6); }
+.flow-motif {
   position: relative;
   z-index: 1;
-  width: 168px;
+  width: 160px;
   opacity: 0.85;
   transition: opacity 0.4s ease;
 }
-.project:hover .agents-motif { opacity: 1; }
+.project:hover .flow-motif { opacity: 1; }
 
 /* Caisse Tracker — acier industriel */
 .cover--caisse { background: linear-gradient(160deg, #23272B, #15181B); }

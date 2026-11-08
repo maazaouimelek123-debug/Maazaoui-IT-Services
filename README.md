@@ -3,9 +3,10 @@
 Site portfolio statique (HTML/CSS/JS, sans build) : éditorial, trilingue **FR / EN / AR**
 (l'arabe s'affiche de droite à gauche),
 avec **mode clair et mode sombre** (palette « Méditerranée » bleu roi + bleu clair).
-Les 6 projets présentés sont vos vrais projets (BISOU, Mornaco, Tarkan, Le Porche,
-PS5 Manager, Douane Manager), chaque carte reprend les couleurs de la marque du client.
-BISOU pointe vers le site en ligne (caffe-bisou-silk.vercel.app).
+Les 7 projets présentés sont ceux hébergés sur Vercel, plus SINDA Agent :
+Garrara International Trading, Eight’In Flour & Coffee, Mister M Coffee, Ejry & Jarry,
+Mornaco (tous en ligne, avec lien vers le site), Caisse Tracker et SINDA Agent (en cours).
+Chaque carte reprend les couleurs de la marque du client.
 
 ## Lancer en local
 
@@ -44,8 +45,9 @@ npx http-server . -p 5510        # puis http://localhost:5510
 
 - **Témoignages clients** : la section existe dans `index.html` mais est en commentaire
   (cherchez `TÉMOIGNAGES`). Décommentez-la avec de **vraies** citations uniquement.
-- **Liens vers les sites en ligne** : quand Mornaco/Tarkan/Le Porche seront déployés,
-  ajoutez un lien public dans le dialog du projet (copiez le bouton `case-link` de BISOU).
+- **Liens vers les sites en ligne** : quand un projet « en cours » sera déployé,
+  ajoutez un lien public dans son dialog (copiez le bouton `case-link` de Garrara)
+  et remplacez le statut « En cours » par la pastille `proj.live` (« En ligne »).
 - **Réseaux** (LinkedIn, Instagram, GitHub) dans la section contact si souhaité.
 - **Parcours** : ajoutez formation/expériences antérieures dans la `timeline`
   (section À propos) — seuls les éléments vérifiables ont été inclus.
