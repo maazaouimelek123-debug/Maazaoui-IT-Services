@@ -148,7 +148,10 @@
     'form.submit': 'Send my request',
     'form.ph.name': 'Your name',
     'form.ph.email': 'you@example.com',
-    'form.ph.message': 'E.g. we enter our invoices by hand and want to track each agent’s expenses…'
+    'form.ph.message': 'E.g. we enter our invoices by hand and want to track each agent’s expenses…',
+    'form.okTitle': 'Request sent!',
+    'form.okText': 'Thank you! I’ll read your message and reply within 24 hours with first ideas.',
+    'form.again': 'Send another request'
   };
 
   /* Version arabe (العربية) — affichée de droite à gauche (dir="rtl").
@@ -287,7 +290,10 @@
     'form.submit': 'إرسال طلبي',
     'form.ph.name': 'اسمك',
     'form.ph.email': 'you@example.com',
-    'form.ph.message': 'مثال: نُدخل فواتيرنا يدوياً ونريد متابعة مصاريف كل عون…'
+    'form.ph.message': 'مثال: نُدخل فواتيرنا يدوياً ونريد متابعة مصاريف كل عون…',
+    'form.okTitle': 'تم إرسال طلبك!',
+    'form.okText': 'شكراً! سأقرأ رسالتك وأردّ عليك خلال 24 ساعة بأولى الأفكار.',
+    'form.again': 'إرسال طلب آخر'
   };
 
   var META = {
@@ -659,6 +665,24 @@
       else field.removeAttribute('aria-invalid');
     }
 
+    var successEl = document.getElementById('form-success');
+    function showSuccess() {
+      form.style.minHeight = form.offsetHeight + 'px'; // la carte garde sa taille
+      form.reset();
+      form.classList.add('is-sent');
+      successEl.hidden = false;
+      showStatus('ok', 'formOk'); // annoncé aux lecteurs d'écran
+      successEl.querySelector('.success-title').focus({ preventScroll: true });
+    }
+    successEl.querySelector('.success-again').addEventListener('click', function () {
+      successEl.hidden = true;
+      form.classList.remove('is-sent');
+      form.style.minHeight = '';
+      showStatus('', 'formSending');
+      statusEl.textContent = '';
+      form.elements.name.focus();
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var f = form.elements;
@@ -689,8 +713,7 @@
       }).then(function (res) {
         return res.json().catch(function () { return {}; }).then(function (data) {
           if (res.ok && data.ok) {
-            form.reset();
-            showStatus('ok', 'formOk');
+            showSuccess();
           } else if (res.status === 429) {
             showStatus('err', 'formRate');
           } else if (data.error === 'invalid_email') {
