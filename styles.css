@@ -518,7 +518,7 @@ h1 em, h2 em {
 }
 
 .hero-stats {
-  flex: 1 1 300px;
+  flex: 1 1 340px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
@@ -528,7 +528,7 @@ h1 em, h2 em {
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.4rem 1.5rem;
+  padding: 1.4rem 1.3rem;
   border-radius: 24px;
 }
 .stat dd {
@@ -553,6 +553,8 @@ h1 em, h2 em {
 .stat-feature dd { color: #FFFFFF; font-size: clamp(2.8rem, 4.6vw, 3.6rem); }
 .stat-feature dt { color: #E3E9FF; font-size: 0.95rem; }
 .dd-accent { color: var(--accent) !important; }
+.dd-icon { display: flex; flex-direction: column; align-items: flex-start; gap: 0.45rem; white-space: nowrap; }
+.dd-icon svg { flex: none; width: 0.6em; height: 0.6em; color: var(--accent); }
 
 /* ============ Sections ============ */
 .section {
