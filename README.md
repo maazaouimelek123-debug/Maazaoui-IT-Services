@@ -8,6 +8,9 @@ La section **Logiciels métier** (SINDA Agent, Caisse Tracker) est mise en avant
 suivie des **Sites web** en ligne (Garrara, Eight’In, Mister M Coffee, Mornaco),
 chacun avec un lien « Visiter » et une fiche « Détails ».
 Le logo Garrara est dans `assets/clients/`.
+La tuile Caisse Tracker affiche une vraie capture de l'application v2 (données d'exemple fictives) :
+`assets/projects/caisse-tracker-v2.webp` (ordinateur) et `caisse-tracker-v2-mobile.webp` (écrans ≤ 640 px).
+Pour la remplacer, garder les mêmes noms de fichiers et des données fictives uniquement.
 
 ## Lancer en local
 

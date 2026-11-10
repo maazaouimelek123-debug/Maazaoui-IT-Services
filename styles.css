@@ -676,35 +676,25 @@ h1 em, h2 em {
 .sv-modes .on { background: #7FC4A0; color: #12201A; }
 
 /* Caisse Tracker : agents, part justifiée, budget */
-.soft-visual--caisse { background: #1B1E21; }
-.cv-panel {
+.soft-visual--caisse {
+  justify-content: flex-end;
+  padding: 1.75rem 1.75rem 0;
+  background: linear-gradient(160deg, #0E4E9E 0%, #0A3570 100%);
+  overflow: hidden;
+}
+.cv-frame { display: block; width: 100%; height: 100%; }
+.cv-shot {
+  display: block;
   width: 100%;
-  max-width: 380px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 14px;
-  background: #24282C;
-  border: 1px solid #343A40;
-  border-radius: 14px;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -2px 0 rgba(255,255,255,.08), 0 18px 40px rgba(0,0,0,.35);
+  transition: transform .5s cubic-bezier(.2,.7,.2,1);
 }
-.cv-head,
-.cv-foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  color: #9DB0BF;
-}
-.cv-head { padding-bottom: 8px; border-bottom: 1px solid #343A40; }
-.cv-foot { margin-top: 4px; padding-top: 10px; border-top: 1px solid #343A40; }
-.cv-row { display: flex; align-items: center; gap: 10px; }
-.cv-row i { flex: none; width: 24px; height: 24px; border-radius: 50%; background: #3A434B; }
-.cv-row b { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
-.cv-bar { flex: 1; display: block; height: 8px; border-radius: 99px; background: #343A40; overflow: hidden; }
-.cv-bar > span { display: block; width: var(--w); height: 100%; border-radius: 99px; background: var(--c); }
-.cv-bar--sm { flex: 0 0 90px; }
+.soft:hover .cv-shot { transform: translateY(-6px); }
+@media (prefers-reduced-motion: reduce) { .cv-shot { transition: none; } .soft:hover .cv-shot { transform: none; } }
 
 .soft-body {
   flex: 1;

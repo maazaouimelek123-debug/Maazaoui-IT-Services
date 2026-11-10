@@ -43,6 +43,7 @@
     'p.mornaco.desc': "The printed menu's identity — turquoise, cream, neon violet — turned into a one-page site carrying the full menu: 11 categories, ~200 items.",
     'p.caisse.type': 'Management application',
     'p.caisse.status': 'In progress',
+    'p.caisse.alt': 'Caisse Tracker v2 dashboard: cash budget, amounts awaiting invoices, agents and recent payouts (sample data)',
     'p.caisse.desc': 'Every dinar handed to an agent, tracked all the way to its invoice — at the office or in the field, even offline.',
     'p.misterm.type': 'Website + online ordering',
     'p.misterm.desc': 'Tea room and restaurant in Mornag: full menu, cart, real-time order tracking and a staff area.',
@@ -179,6 +180,7 @@
     'p.mornaco.desc': 'هوية القائمة المطبوعة — فيروزي وكريمي وبنفسجي نيون — تحوّلت إلى موقع من صفحة واحدة يضم القائمة كاملة: 11 فئة ونحو 200 صنف.',
     'p.caisse.type': 'تطبيق تصرّف',
     'p.caisse.status': 'قيد الإنجاز',
+    'p.caisse.alt': 'لوحة Caisse Tracker v2: ميزانية الصندوق، والمبالغ في انتظار الفواتير، والأعوان وآخر المبالغ المسلّمة (بيانات تجريبية)',
     'p.caisse.desc': 'كل دينار يُسلَّم لعون يُتابَع حتى فاتورته — في المكتب أو في الميدان، حتى دون اتصال.',
     'p.misterm.type': 'موقع + طلب عبر الإنترنت',
     'p.misterm.desc': 'قاعة شاي ومطعم في مرناق: قائمة كاملة، وسلة طلبات، وتتبّع الطلب في الوقت الفعلي، وفضاء خاص بالفريق.',
@@ -351,6 +353,12 @@
     if (!(k in FR)) FR[k] = el.getAttribute('placeholder');
   });
 
+  var altNodes = document.querySelectorAll('[data-i18n-alt]');
+  altNodes.forEach(function (el) {
+    var k = el.getAttribute('data-i18n-alt');
+    if (!(k in FR)) FR[k] = el.getAttribute('alt');
+  });
+
   var DICTS = { fr: FR, en: EN, ar: AR };
   var currentLang = 'fr';
   var langSwitch = document.getElementById('lang-switch');
@@ -375,6 +383,10 @@
     phNodes.forEach(function (el) {
       var v = dict[el.getAttribute('data-i18n-ph')];
       if (v != null) el.setAttribute('placeholder', v);
+    });
+    altNodes.forEach(function (el) {
+      var v = dict[el.getAttribute('data-i18n-alt')];
+      if (v != null) el.setAttribute('alt', v);
     });
     var langField = document.querySelector('#contact-form input[name="lang"]');
     if (langField) langField.value = lang;
