@@ -809,8 +809,6 @@ h1 em, h2 em {
 .site-cover--eightin .sc-word { color: #FFFFFF; letter-spacing: 0.12em; }
 .site-cover--misterm { background: #141211; --rule: #C8A24B; }
 .site-cover--misterm .sc-word { color: #F6F2E9; }
-.site-cover--ejrijarri { background: #1C7A4C; }
-.site-cover--ejrijarri .sc-word { color: #F8F4E6; letter-spacing: 0.06em; font-size: clamp(1.5rem, 2.2vw, 1.9rem); }
 .site-cover--mornaco { background: #3CB9A0; --rule: #B26BF2; }
 .site-cover--mornaco .sc-word { color: #1C3049; letter-spacing: 0.04em; }
 .site-cover--mornaco .sc-rule { height: 3px; box-shadow: 0 0 12px 2px rgba(178, 107, 242, 0.8); }
