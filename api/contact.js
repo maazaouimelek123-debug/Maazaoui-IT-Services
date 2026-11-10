@@ -193,7 +193,7 @@ function respond(req, res, status, payload) {
     '<title>MITS — Maazaoui IT Services</title></head><body style="font-family:system-ui,sans-serif;max-width:560px;margin:15vh auto;padding:0 24px;line-height:1.6">' +
     (ok
       ? '<h1>Merci — votre demande a bien été envoyée.</h1><p>Thank you — your request has been sent. Réponse sous 24 h.</p>'
-      : '<h1>Votre demande n’a pas pu être envoyée.</h1><p>Your request could not be sent. Écrivez directement à melekmaazaoui41@gmail.com.</p>') +
+      : '<h1>Votre demande n’a pas pu être envoyée.</h1><p>Your request could not be sent. Écrivez directement à maazaouiservices@gmail.com.</p>') +
     '<p><a href="/#contact">← Retour au site / Back to the site</a></p></body></html>');
 }
 

@@ -302,7 +302,7 @@
       formEmail: 'Cette adresse email ne semble pas valide.',
       formShort: 'Décrivez votre besoin en quelques mots de plus.',
       formRate: 'Trop de demandes envoyées. Réessayez dans quelques minutes.',
-      formErr: 'L’envoi n’a pas fonctionné. Écrivez-moi directement à melekmaazaoui41@gmail.com.'
+      formErr: 'L’envoi n’a pas fonctionné. Écrivez-moi directement à maazaouiservices@gmail.com.'
     },
     en: {
       title: 'Melek Maazaoui — Custom business software & websites in Tunis',
@@ -319,7 +319,7 @@
       formEmail: 'This email address doesn’t look valid.',
       formShort: 'Please describe what you need in a few more words.',
       formRate: 'Too many requests sent. Please try again in a few minutes.',
-      formErr: 'Sending failed. Please write to me directly at melekmaazaoui41@gmail.com.'
+      formErr: 'Sending failed. Please write to me directly at maazaouiservices@gmail.com.'
     },
     ar: {
       title: 'Melek Maazaoui — برمجيات مهنية ومواقع ويب حسب الطلب في تونس',
@@ -336,7 +336,7 @@
       formEmail: 'يبدو أن عنوان البريد الإلكتروني غير صالح.',
       formShort: 'يُرجى وصف حاجتك ببضع كلمات إضافية.',
       formRate: 'تم إرسال طلبات كثيرة. أعِد المحاولة بعد بضع دقائق.',
-      formErr: 'تعذّر الإرسال. راسلني مباشرة على melekmaazaoui41@gmail.com.'
+      formErr: 'تعذّر الإرسال. راسلني مباشرة على maazaouiservices@gmail.com.'
     }
   };
 
